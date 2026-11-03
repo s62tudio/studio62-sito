@@ -1,0 +1,15 @@
+{
+  "name": "studio62-sito",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Il sito di Studio62. Nessuna dipendenza: serve solo Node.js 20 o successivo.",
+  "scripts": {
+    "dev": "node --watch-path=./src scripts/dev.js",
+    "start": "node scripts/dev.js",
+    "build": "node scripts/build.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
