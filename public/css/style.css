@@ -103,7 +103,8 @@ a:hover > .arr, a:hover .work-arrow .arr, .btn:hover .arr { transform: translate
   .menu-toggle { display: none; }
   .header-end .btn-small { display: inline-flex; }
 }
-@media (min-width: 1240px) { .avail { display: inline-flex; } }
+@media (min-width: 1400px) { .avail { display: inline-flex; } }
+@media (min-width: 900px) and (max-width: 1100px) { .main-nav { gap: 18px; } .header-end .btn-small { display: none; } }
 
 .menu { position: fixed; inset: 0; z-index: 35; background: var(--nero); color: var(--carta); padding-top: calc(var(--header-h) + env(safe-area-inset-top, 0px)); overflow-y: auto; }
 .menu-inner { display: flex; flex-direction: column; gap: 4px; padding-block: 24px 40px; }
@@ -147,6 +148,8 @@ body.menu-open .menu-toggle { border-color: var(--carta); }
 .page-hero { padding-block: clamp(48px, 9vw, 120px) clamp(40px, 6vw, 80px); }
 .page-title { font-size: clamp(64px, 14vw, 200px); font-weight: 800; letter-spacing: -.06em; line-height: .86; margin: 16px 0 0 -.04em; }
 .page-title .count { font-family: var(--mono); font-weight: 400; font-size: 14px; letter-spacing: 0; vertical-align: top; position: relative; top: .6em; color: var(--grigio); }
+.page-title-long { font-size: clamp(42px, 11vw, 176px); }
+.nowrap { white-space: nowrap; }
 .page-hero .lead { margin-top: clamp(24px, 3vw, 40px); }
 
 /* ---------- Lista lavori ---------- */
@@ -340,6 +343,43 @@ body.menu-open .menu-toggle { border-color: var(--carta); }
 .form-status.err { color: #B3261E; }
 .hp { position: absolute; left: -9999px; }
 .field.invalid input, .field.invalid textarea { border-color: #B3261E; }
+
+/* ---------- Percorso / profilo IT ---------- */
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tags li { font-family: var(--mono); font-size: 12.5px; letter-spacing: .02em; padding: 6px 11px; border-radius: 999px; border: 1px solid var(--linea); background: color-mix(in srgb, var(--carta) 60%, #fff); }
+.timeline { border-top: 1px solid var(--linea); }
+.tl-item { display: grid; gap: 10px; padding-block: 26px; border-bottom: 1px solid var(--linea); }
+@media (min-width: 760px) { .tl-item { grid-template-columns: 200px 1fr; gap: 28px; } }
+.tl-when { font-family: var(--mono); font-size: 12.5px; letter-spacing: .04em; color: var(--grigio); padding-top: .35em; }
+.tl-body { display: grid; gap: 10px; justify-items: start; min-width: 0; }
+.tl-title { font-size: clamp(22px, 2.4vw, 32px); font-weight: 700; letter-spacing: -.03em; line-height: 1.1; }
+.tl-org { font-weight: 500; }
+.tl-body > p:not(.tl-org) { color: var(--grigio); }
+.tl-list { display: grid; gap: 4px; color: var(--grigio); }
+.tl-list li { padding-left: 18px; position: relative; }
+.tl-list li::before { content: ""; position: absolute; left: 2px; top: .62em; width: 6px; height: 6px; border-radius: 50%; background: var(--punto); }
+.tl-item.is-next .tl-title::after { content: "In arrivo"; margin-left: 12px; vertical-align: middle; font-family: var(--mono); font-weight: 400; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--punto); border: 1px solid var(--punto); border-radius: 999px; padding: 3px 8px; }
+.skills, .it-grid { display: grid; gap: 14px; }
+@media (min-width: 760px) { .skills { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 900px) { .it-grid { grid-template-columns: repeat(3, 1fr); } }
+.skill-group { display: grid; gap: 14px; align-content: start; padding: 24px; border: 1px solid var(--linea); border-radius: 24px; }
+.skill-group h3 { font-size: 22px; font-weight: 700; letter-spacing: -.02em; }
+.cert-mini { display: grid; gap: 8px; font-size: 15px; }
+.cert-mini li { padding-bottom: 8px; border-bottom: 1px solid var(--linea); }
+.cert-mini li:last-child { border-bottom: 0; padding-bottom: 0; }
+.certs { border-top: 1px solid var(--linea); }
+.certs li { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 20px; padding-block: 20px; border-bottom: 1px solid var(--linea); }
+.cert-name { font-family: var(--display); font-weight: 700; font-size: clamp(20px, 2.2vw, 28px); letter-spacing: -.025em; }
+.it-block { background: var(--superficie); }
+.it-block .skill-group { background: var(--carta); border-color: transparent; }
+.cta-note { margin-top: 24px; max-width: 52ch; color: var(--grigio-chiaro); font-size: 17px; }
+.cta-split { display: grid; gap: 12px; margin-top: clamp(36px, 5vw, 56px); }
+@media (min-width: 760px) { .cta-split { grid-template-columns: 1fr 1fr; } }
+.cta-card { display: grid; gap: 10px; padding: clamp(22px, 3vw, 34px); border: 1px solid var(--linea-scura); border-radius: 26px; text-decoration: none; transition: background .35s var(--ease), border-color .35s; }
+.cta-card-title { font-family: var(--display); font-weight: 700; font-size: clamp(26px, 3vw, 40px); letter-spacing: -.035em; line-height: 1.05; }
+.cta-card-line { display: inline-flex; align-items: center; gap: 10px; color: var(--grigio-chiaro); }
+.cta-card:hover { background: var(--punto); border-color: var(--punto); }
+.cta-card:hover .label, .cta-card:hover .cta-card-line { color: #fff; }
 
 /* ---------- Testo semplice ---------- */
 .prose { display: grid; gap: 16px; max-width: 70ch; }

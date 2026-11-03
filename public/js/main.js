@@ -132,6 +132,9 @@
   /* Modulo contatti */
   const form = $('.form');
   if (form) {
+    // Arrivando da "Hai un progetto?" o "Cerchi un profilo junior?" preseleziona l'argomento
+    const tipo = new URLSearchParams(location.search).get('tipo');
+    if (tipo === 'lavoro') $$('input[data-tipo="lavoro"]', form).forEach((i) => { i.checked = true; });
     const status = $('.form-status', form);
     form.addEventListener('submit', async (e) => {
       e.preventDefault();

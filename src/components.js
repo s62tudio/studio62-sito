@@ -35,8 +35,8 @@ export function socialBlock() {
     <div class="sec-head">
       <p class="label">Social</p>
       <div>
-        <h2 class="h2">Le pagine che curo<span class="dot" aria-hidden="true"></span></h2>
-        <p class="lead">Ogni giorno, per attività diverse. Il modo migliore per vederle è aprirle.</p>
+        <h2 class="h2">Progetti di comunicazione<span class="dot" aria-hidden="true"></span></h2>
+        <p class="lead">Grafiche e contenuti social per attività del territorio. Il modo migliore per vederli è aprire le pagine.</p>
       </div>
     </div>
     <ul class="social-grid">

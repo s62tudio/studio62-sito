@@ -15,7 +15,7 @@ export const progetti = [
     breve: 'Maglia da gioco',
     anno: 2026,
     tipo: ['sportswear', 'grafica'],
-    servizio: 'Sportswear design & brand identity',
+    servizio: 'Sportswear design',
     crediti: [{ ruolo: 'Foto', nome: 'Giovanni Glorioso' }],
     link: null,
     seo: 'Design della maglia da gioco per ASD Falchi Cautano: nero dominante, rosso e blu in asimmetria, il falco sulla manica.',
@@ -27,7 +27,7 @@ export const progetti = [
     idea:
       "Il nero come colore dominante, per dare alla maglia un'impronta di eleganza, grinta e professionalità. Il rosso e il blu, i colori sociali, entrano in modo asimmetrico: uno per manica, e ripresi nei dettagli grafici sul retro.",
     lavoro:
-      'Sulla manica la figura del falco, il simbolo del club. Le finiture personalizzate raccontano la storia della squadra e la sua presenza in campo.',
+      "Sulla manica la figura del falco, il simbolo del club, insieme allo stemma della società. Le finiture personalizzate raccontano la storia della squadra e la sua presenza in campo.",
     risultato: null,
     galleria: [
       { file: '03', w: 2970, h: 4455, sizes: [640, 1200, 1800], span: 'half', alt: 'Ritratto di un giocatore con la maglia, manica blu con il falco giallo' },
@@ -57,7 +57,7 @@ export const progetti = [
     idea:
       "Un'esperienza digitale all'altezza della struttura: estetica raffinata, layout pulito e un percorso che valorizza ogni parte del brand, dalla storia della cantina ai vini, fino alle degustazioni e all'agriturismo.",
     lavoro:
-      'Navigazione fluida e reattiva su desktop e telefono. Ogni vino ha la sua scheda con ingredienti, valori nutrizionali e indicazioni per lo smaltimento. Indicizzazione su Google tramite Search Console.',
+      "Navigazione fluida e reattiva su desktop e telefono. Ogni vino ha la sua scheda con ingredienti, valori nutrizionali e indicazioni per lo smaltimento, raggiungibile anche dal QR code stampato sull'etichetta. Indicizzazione su Google tramite Search Console.",
     risultato:
       "Il sito è online e accompagnerà l'apertura dell'agriturismo, il 21 novembre 2026, insieme alla promozione sui social.",
     galleria: [
@@ -89,7 +89,7 @@ export const progetti = [
     idea:
       "Tutto parte da una foto vera del vigneto immerso nel paesaggio. Quella scena è stata rielaborata e ridisegnata a mano insieme all'illustratore @bat_artattack, fino a diventare un'illustrazione su misura che lega il territorio al vino.",
     lavoro:
-      "Progetto grafico realizzato in Adobe Illustrator. Particolare attenzione alla stampa e alle finiture: dettagli in rilievo che danno volume e rendono l'etichetta da toccare, oltre che da guardare.",
+      "Progetto grafico realizzato in Adobe Illustrator. Particolare attenzione alla stampa e alle finiture: dettagli in rilievo che danno volume e rendono l'etichetta da toccare, oltre che da guardare. Sul retro, un QR code porta direttamente alla scheda del vino sul sito della cantina, con ingredienti e valori nutrizionali.",
     risultato: null,
     galleria: [
       { file: '03', w: 1066, h: 1600, sizes: [640, 1066], span: 'half', alt: 'Retro etichetta con testo descrittivo e QR code' },

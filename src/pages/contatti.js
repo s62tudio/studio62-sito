@@ -1,4 +1,4 @@
-import { site, servizi } from '../config.js';
+import { site, collaborazioni } from '../config.js';
 import { layout } from '../layout.js';
 import { esc } from '../lib.js';
 
@@ -13,7 +13,7 @@ export default function contatti() {
 <section class="section section-tight">
   <div class="wrap contact-grid">
     <div class="contact-side">
-      <p class="lead">Raccontami cosa fai e cosa ti serve. Ti rispondo personalmente.</p>
+      <p class="lead">Hai un'attività e un progetto in mente, oppure cerchi un profilo junior in ambito IT? Scrivimi: ti rispondo personalmente.</p>
       <div class="contact-ways">
         <div><span class="label">Email</span>
           <button class="copy copy-dark" type="button" data-copy="${site.email}"><span class="copy-text">${site.email}</span><span class="copy-hint" aria-live="polite">Copia</span></button>
@@ -27,12 +27,12 @@ export default function contatti() {
       <div class="field"><label for="f-nome">Nome</label><input id="f-nome" name="nome" autocomplete="name" required></div>
       <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
       <fieldset class="field">
-        <legend>Di cosa hai bisogno?</legend>
-        <div class="chips">${servizi
-          .map((s) => `<label class="chip-check"><input type="checkbox" name="servizi" value="${esc(s.nome)}"><span>${esc(s.nome)}</span></label>`)
-          .join('')}<label class="chip-check"><input type="checkbox" name="servizi" value="Non lo so ancora"><span>Non lo so ancora</span></label></div>
+        <legend>Di cosa si tratta?</legend>
+        <div class="chips">${collaborazioni
+          .map((s) => `<label class="chip-check"><input type="checkbox" name="argomento" value="${esc(s.nome)}" data-tipo="progetto"><span>${esc(s.nome)}</span></label>`)
+          .join('')}<label class="chip-check"><input type="checkbox" name="argomento" value="Opportunità di stage o lavoro IT" data-tipo="lavoro"><span>Opportunità di stage o lavoro IT</span></label><label class="chip-check"><input type="checkbox" name="argomento" value="Altro"><span>Altro</span></label></div>
       </fieldset>
-      <div class="field"><label for="f-msg">Raccontami il progetto</label><textarea id="f-msg" name="messaggio" rows="5" required></textarea></div>
+      <div class="field"><label for="f-msg">Messaggio</label><textarea id="f-msg" name="messaggio" rows="5" required></textarea></div>
       <label class="consent"><input type="checkbox" name="privacy" required> <span>Ho letto l'<a href="/privacy/">informativa privacy</a>.</span></label>
       <button class="btn" type="submit">Invia</button>
       <p class="form-status" role="status" aria-live="polite"></p>
@@ -43,7 +43,7 @@ export default function contatti() {
   return layout({
     path: '/contatti/',
     title: 'Contatti',
-    description: 'Hai un progetto? Scrivi a Studio62: brand identity, grafica, siti web e social.',
+    description: 'Contatta Francesco Battaglia: progetti di siti, grafica e comunicazione, oppure opportunità in ambito IT e cybersecurity.',
     body,
   });
 }
