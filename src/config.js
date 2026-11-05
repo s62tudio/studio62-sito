@@ -4,17 +4,15 @@ export const site = {
   name: 'Studio62',
   url: 'https://studio62.com', // dominio definitivo: serve per SEO e anteprime social
   owner: 'Francesco Battaglia',
-  // DA SOSTITUIRE: email definitiva da mostrare sul sito
-  email: 'ciao@studio62.com',
+  email: 's62tudio@gmail.com',
   instagram: { handle: '_studio_62_', url: 'https://www.instagram.com/_studio_62_/' },
   description:
-    'Studio62 è Francesco Battaglia: studente ITS in Network & Cybersecurity con un diploma in grafica. Siti web, identità visive e progetti di comunicazione per attività del territorio.',
+    'Studio62 è uno studio creativo: siti web, grafica e stampa, identità visiva e progetti di comunicazione per attività che vogliono farsi notare.',
   available: true, // mostra "Disponibile per nuovi progetti" in alto
 };
 
 export const nav = [
   { href: '/lavori/', label: 'Lavori' },
-  { href: '/percorso/', label: 'Percorso' },
   { href: '/collaborazioni/', label: 'Collaborazioni' },
   { href: '/studio/', label: 'Studio' },
   { href: '/contatti/', label: 'Contatti' },
@@ -60,10 +58,10 @@ export const collaborazioni = [
 ];
 
 export const metodo = [
-  { nome: 'Ascolto', testo: 'Mi racconti la tua attività e cosa ti serve. Definiamo insieme obiettivo, tempi e cosa consegno.' },
-  { nome: 'Idea', testo: 'Ti propongo una direzione sola, ragionata. Non dieci bozze a caso.' },
-  { nome: 'Progetto', testo: "Disegno e sviluppo, con passaggi chiari in cui vedi l'avanzamento." },
-  { nome: 'Consegna', testo: 'Pubblichiamo, stampiamo, mettiamo online. Ti lascio tutto in ordine e controllo che funzioni.' },
+  { nome: 'Ascolto', testo: 'Si parte dalla tua attività e da cosa ti serve: obiettivo, tempi e cosa verrà consegnato, messi in chiaro fin da subito.' },
+  { nome: 'Idea', testo: 'Una direzione sola, ragionata. Non dieci bozze a caso.' },
+  { nome: 'Progetto', testo: "Design e sviluppo, con passaggi chiari in cui vedi l'avanzamento." },
+  { nome: 'Consegna', testo: 'Si stampa, si pubblica, si mette online. Tutto consegnato in ordine e verificato.' },
 ];
 
 // Progetti di comunicazione sui social. Per aggiungerne uno, copia una riga.
@@ -78,19 +76,19 @@ export const clienti = ['Capo Tre Venti', 'Feltagrifer', 'ASD Falchi Cautano', '
 export const faq = [
   {
     d: 'Quanto tempo serve?',
-    r: 'Dipende dal progetto. Prima di iniziare definiamo cosa consegno e in quanto tempo, e ti aggiorno a ogni passaggio.',
+    r: 'Dipende dal progetto. Prima di iniziare si definisce cosa verrà consegnato e in quanto tempo, con aggiornamenti a ogni passaggio.',
   },
   {
-    d: 'Rilasci fattura?',
-    r: 'No: collaboro su progetti singoli con prestazione occasionale e rilascio una ricevuta. Se ti serve qualcosa di continuativo, ne parliamo e troviamo la soluzione giusta.',
+    d: 'Viene rilasciata fattura?',
+    r: 'No: Studio62 collabora su progetti singoli con prestazione occasionale e rilascia una ricevuta. Se ti serve qualcosa di continuativo, se ne parla e si trova la soluzione giusta.',
   },
   {
-    d: 'Lavori anche fuori dalla tua zona?',
-    r: 'Sì. Lavoro da remoto: ci sentiamo in videochiamata, al telefono o per messaggio, ovunque tu sia.',
+    d: 'Si può lavorare anche a distanza?',
+    r: 'Sì. Studio62 lavora da remoto: ci si sente in videochiamata, al telefono o per messaggio, ovunque tu sia.',
   },
   {
-    d: 'Cosa mi serve per iniziare?',
-    r: "Solo un'idea di cosa fai e di dove vuoi arrivare. Al resto pensiamo insieme.",
+    d: 'Cosa serve per iniziare?',
+    r: "Solo un'idea di cosa fai e di dove vuoi arrivare. Al resto si pensa insieme.",
   },
 ];
 

@@ -15,7 +15,7 @@ export default function collaborazioniPage() {
   <div class="wrap">
     <p class="label">Collaborazioni</p>
     <h1 class="page-title">Progetti<br>su misura<span class="dot" aria-hidden="true"></span></h1>
-    <p class="lead">Collaboro con attività e piccole realtà su progetti singoli, con un obiettivo, dei tempi e una consegna chiari. Un sito, un'etichetta, una divisa, una campagna per un'apertura.</p>
+    <p class="lead">Studio62 collabora con attività e piccole realtà su progetti singoli, con un obiettivo, dei tempi e una consegna chiari. Un sito, un'etichetta, una divisa, una campagna per un'apertura.</p>
   </div>
 </section>
 
@@ -42,7 +42,7 @@ export default function collaborazioniPage() {
   <div class="wrap">
     <div class="sec-head">
       <p class="label">Metodo</p>
-      <div><h2 class="h2">Come lavoriamo insieme<span class="dot" aria-hidden="true"></span></h2></div>
+      <div><h2 class="h2">Come funziona<span class="dot" aria-hidden="true"></span></h2></div>
     </div>
     <ol class="steps">
       ${metodo.map((m, i) => `<li><span class="step-n">${String(i + 1).padStart(2, '0')}</span><h3>${esc(m.nome)}</h3><p>${esc(m.testo)}</p></li>`).join('')}

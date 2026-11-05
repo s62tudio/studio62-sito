@@ -5,7 +5,6 @@ import home from './pages/home.js';
 import lavori from './pages/lavori.js';
 import progetto from './pages/progetto.js';
 import collaborazioni from './pages/collaborazioni.js';
-import percorso from './pages/percorso.js';
 import studio from './pages/studio.js';
 import contatti from './pages/contatti.js';
 import { privacy, notFound } from './pages/altre.js';
@@ -14,7 +13,6 @@ export function routes() {
   const r = {
     '/': home,
     '/lavori/': lavori,
-    '/percorso/': percorso,
     '/collaborazioni/': collaborazioni,
     '/studio/': studio,
     '/contatti/': contatti,

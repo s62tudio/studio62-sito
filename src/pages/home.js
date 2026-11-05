@@ -1,12 +1,12 @@
-import { site, collaborazioni, metodo, clienti, percorso } from '../config.js';
+import { site, collaborazioni, metodo, clienti } from '../config.js';
 import { progetti } from '../progetti.js';
-import { layout } from '../layout.js';
+import { layout, ctaBlock } from '../layout.js';
 import { workList, socialBlock } from '../components.js';
 import { esc, arrow } from '../lib.js';
 
 export default function home() {
   const manifesto =
-    'Studio come si proteggono reti e sistemi. Nel frattempo progetto siti, etichette e comunicazione per attività vere. Due modi diversi di arrivare allo stesso punto: fare le cose bene, fino in fondo.';
+    "Ogni progetto parte da un ascolto e arriva a una scelta. Si toglie il superfluo finché resta solo ciò che serve, e lo si porta fino in fondo: dal file per la stampa al sito online. Un solo referente, dall'inizio alla fine.";
   const words = manifesto
     .split(' ')
     .map((w) => `<span class="w">${esc(w)}</span>`)
@@ -21,13 +21,13 @@ export default function home() {
       <span class="line" aria-hidden="true"><span>al punto<span class="dot hero-dot"></span></span></span>
     </h1>
     <div class="hero-foot">
-      <p class="hero-lead">Sono ${esc(site.owner)}: studente ITS in Network &amp; Cybersecurity, con un diploma in grafica. Con Studio62 realizzo siti, grafica e comunicazione per attività del territorio.</p>
+      <p class="hero-lead">Studio62 è uno studio creativo. Siti web, grafica e progetti di comunicazione per attività che vogliono farsi notare.</p>
       <div class="hero-actions">
         <a class="btn" href="/lavori/">Guarda i lavori ${arrow}</a>
-        <a class="link" href="/percorso/">Il mio percorso IT</a>
+        <a class="link" href="/contatti/">Inizia un progetto</a>
       </div>
     </div>
-    <p class="clients"><span class="label">Hanno lavorato con me</span> <span>${clienti.map(esc).join('<i aria-hidden="true">·</i>')}</span></p>
+    <p class="clients"><span class="label">Clienti</span> <span>${clienti.map(esc).join('<i aria-hidden="true">·</i>')}</span></p>
   </div>
 </section>
 
@@ -42,32 +42,13 @@ export default function home() {
   </div>
 </section>
 
-<section class="section it-block">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="label">Profilo IT</p>
-      <div>
-        <h2 class="h2">Network &amp; Cybersecurity<span class="dot" aria-hidden="true"></span></h2>
-        <p class="lead">Al corso ITS dell'ICT Campus di Benevento studio reti, sistemi e sicurezza: 1.800 ore tra aula, laboratorio e stage in azienda.</p>
-      </div>
-    </div>
-    <div class="it-grid">
-      ${percorso.competenze
-        .slice(0, 2)
-        .map((c) => `<div class="skill-group"><h3>${esc(c.area)}</h3><ul class="tags">${c.voci.map((v) => `<li>${esc(v)}</li>`).join('')}</ul></div>`)
-        .join('')}
-      <div class="skill-group"><h3>Certificazioni</h3><ul class="cert-mini">${percorso.certificazioni.map((c) => `<li>${esc(c.ente)} · ${esc(c.nome)}</li>`).join('')}</ul></div>
-    </div>
-    <p class="more"><a class="link" href="/percorso/">Formazione, competenze ed esperienze ${arrow}</a></p>
-  </div>
-</section>
 
 <section class="section manifesto">
   <div class="wrap manifesto-inner">
-    <p class="label">Studio62</p>
+    <p class="label">Approccio</p>
     <div>
       <p class="manifesto-text">${words}</p>
-      <p class="more"><a class="link" href="/studio/">Perché 62 ${arrow}</a></p>
+      <p class="more"><a class="link" href="/studio/">Chi c'è dietro Studio62 ${arrow}</a></p>
     </div>
   </div>
 </section>
@@ -106,41 +87,27 @@ ${socialBlock()}
   </div>
 </section>
 
-<section class="cta">
-  <div class="wrap cta-inner">
-    <p class="label">Contatti</p>
-    <h2 class="cta-title">Arriviamo<br>al punto<span class="dot" aria-hidden="true"></span></h2>
-    <div class="cta-split">
-      <a class="cta-card" href="/contatti/?tipo=progetto" data-cursor="Scrivi">
-        <span class="label">Attività</span>
-        <span class="cta-card-title">Hai un progetto?</span>
-        <span class="cta-card-line">Un sito, una grafica, una campagna. ${arrow}</span>
-      </a>
-      <a class="cta-card" href="/contatti/?tipo=lavoro" data-cursor="Scrivi">
-        <span class="label">Aziende e team IT</span>
-        <span class="cta-card-title">Cerchi un profilo junior?</span>
-        <span class="cta-card-line">Network &amp; Cybersecurity, diploma ITS nel 2027. ${arrow}</span>
-      </a>
-    </div>
-  </div>
-</section>
+${ctaBlock()}
 `;
 
   return layout({
     path: '/',
-    title: 'Studio62 · Francesco Battaglia',
+    title: 'Studio62 · Studio creativo',
     description: site.description,
     body,
     bodyClass: 'is-home',
     jsonld: {
       '@context': 'https://schema.org',
-      '@type': 'Person',
-      name: site.owner,
+      '@type': 'ProfessionalService',
+      name: 'Studio62',
       url: site.url,
-      jobTitle: 'Studente ITS Network & Cybersecurity · Web e graphic designer',
+      logo: site.url + '/img/logo/studio62-marchio-scuro.svg',
+      description: site.description,
+      founder: { '@type': 'Person', name: site.owner },
+      email: site.email,
       sameAs: [site.instagram.url],
-      brand: { '@type': 'Brand', name: 'Studio62', logo: site.url + '/img/logo/studio62-marchio-scuro.svg' },
-      knowsAbout: [...percorso.competenze.flatMap((c) => c.voci), ...collaborazioni.map((s) => s.nome)],
+      areaServed: 'IT',
+      knowsAbout: collaborazioni.map((s) => s.nome),
     },
   });
 }

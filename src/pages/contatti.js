@@ -13,7 +13,7 @@ export default function contatti() {
 <section class="section section-tight">
   <div class="wrap contact-grid">
     <div class="contact-side">
-      <p class="lead">Hai un'attività e un progetto in mente, oppure cerchi un profilo junior in ambito IT? Scrivimi: ti rispondo personalmente.</p>
+      <p class="lead">Hai un'attività e un progetto in mente? Racconta cosa fai e cosa ti serve: ti risponde direttamente Francesco.</p>
       <div class="contact-ways">
         <div><span class="label">Email</span>
           <button class="copy copy-dark" type="button" data-copy="${site.email}"><span class="copy-text">${site.email}</span><span class="copy-hint" aria-live="polite">Copia</span></button>
@@ -30,7 +30,7 @@ export default function contatti() {
         <legend>Di cosa si tratta?</legend>
         <div class="chips">${collaborazioni
           .map((s) => `<label class="chip-check"><input type="checkbox" name="argomento" value="${esc(s.nome)}" data-tipo="progetto"><span>${esc(s.nome)}</span></label>`)
-          .join('')}<label class="chip-check"><input type="checkbox" name="argomento" value="Opportunità di stage o lavoro IT" data-tipo="lavoro"><span>Opportunità di stage o lavoro IT</span></label><label class="chip-check"><input type="checkbox" name="argomento" value="Altro"><span>Altro</span></label></div>
+          .join('')}<label class="chip-check"><input type="checkbox" name="argomento" value="Altro"><span>Altro</span></label></div>
       </fieldset>
       <div class="field"><label for="f-msg">Messaggio</label><textarea id="f-msg" name="messaggio" rows="5" required></textarea></div>
       <label class="consent"><input type="checkbox" name="privacy" required> <span>Ho letto l'<a href="/privacy/">informativa privacy</a>.</span></label>
@@ -43,7 +43,7 @@ export default function contatti() {
   return layout({
     path: '/contatti/',
     title: 'Contatti',
-    description: 'Contatta Francesco Battaglia: progetti di siti, grafica e comunicazione, oppure opportunità in ambito IT e cybersecurity.',
+    description: 'Scrivi a Studio62 per un sito, una grafica, un\'identità visiva o un progetto di comunicazione.',
     body,
   });
 }

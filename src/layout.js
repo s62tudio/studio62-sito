@@ -28,7 +28,7 @@ function header(path) {
   <nav class="wrap menu-inner" aria-label="Menu">
     <a href="/">Home</a>${links}
     <div class="menu-foot">
-      <span class="label">Scrivimi</span>
+      <span class="label">Scrivi a Studio62</span>
       <a class="menu-mail" href="mailto:${site.email}">${site.email}</a>
       <a href="${site.instagram.url}" rel="noopener" target="_blank">Instagram @${site.instagram.handle}</a>
     </div>
@@ -41,14 +41,14 @@ function footer() {
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-lead">
-        <p class="footer-claim">Siti, grafica e comunicazione. Studente ITS in Network &amp; Cybersecurity.</p>
+        <p class="footer-claim">Studio creativo. Siti, grafica e comunicazione per attività che vogliono farsi notare.</p>
         <a class="footer-mail" href="mailto:${site.email}">${site.email}</a>
       </div>
       <nav class="footer-col" aria-label="Pagine"><span class="label">Pagine</span>${nav.map((n) => `<a href="${n.href}">${n.label}</a>`).join('')}</nav>
       <div class="footer-col"><span class="label">Social</span><a href="${site.instagram.url}" rel="noopener" target="_blank">Instagram</a></div>
       <div class="footer-col"><span class="label">Studio62</span><span>${esc(site.owner)}</span><span>Da remoto, ovunque</span></div>
     </div>
-    <div class="footer-legal"><span>© ${year} Studio62 · ${esc(site.owner)}</span><span>Collaborazioni con prestazione occasionale</span><a href="/privacy/">Privacy</a></div>
+    <div class="footer-legal"><span>© ${year} Studio62 · ${esc(site.owner)}</span><a href="/privacy/">Privacy</a></div>
   </div>
   <div class="footer-giant" aria-hidden="true">62<span class="dot"></span></div>
 </footer>`;
@@ -108,7 +108,7 @@ export function ctaBlock(title = 'Hai un progetto?', line = 'Arriviamo al punto'
     <p class="label">Nuovo progetto</p>
     <h2 class="cta-title">${esc(title)}<br>${esc(line)}<span class="dot" aria-hidden="true"></span></h2>
     <div class="cta-actions">
-      <a class="btn btn-light" href="/contatti/">Scrivimi ${arrow}</a>
+      <a class="btn btn-light" href="/contatti/">Inizia un progetto ${arrow}</a>
       <button class="copy" type="button" data-copy="${site.email}"><span class="copy-text">${site.email}</span><span class="copy-hint" aria-live="polite">Copia</span></button>
     </div>
   </div>
