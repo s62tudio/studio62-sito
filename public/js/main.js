@@ -149,8 +149,15 @@
   if (slides.length) {
     const bars = $$('.hero-phone .hs-bars i');
     const T = 2800; let k = 0;
+    // Gli spezzoni del reel partono dall'inizio quando arriva il loro turno; il successivo si carica in anticipo
+    const vidOf = (n) => $('video', slides[n]);
+    const load = (v) => { if (v && !v.src) { v.src = v.dataset.src; v.load(); } };
+    load(vidOf(1));
     const show = (n) => {
+      const old = vidOf(k); if (old) setTimeout(() => old.pause(), 900);
       slides[k].classList.remove('on'); k = n; slides[k].classList.add('on');
+      const v = vidOf(k); if (v) { load(v); try { v.currentTime = 0; } catch {} v.play().catch(() => {}); }
+      load(vidOf((k + 1) % slides.length));
       bars.forEach((b, i) => { b.classList.toggle('done', i < k); b.classList.remove('on'); });
       void bars[k].offsetWidth; bars[k].classList.add('on');
     };

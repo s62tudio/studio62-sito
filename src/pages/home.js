@@ -5,14 +5,24 @@ import { workList, socialBlock, instagramBlock } from '../components.js';
 import { esc, arrow } from '../lib.js';
 
 // Immagini che scorrono nello smartphone accanto al titolo
+// clip: spezzone del reel (public/video/clip/<clip>.mp4), della stessa durata delle foto
 const heroSlides = [
   { slug: 'falchi-cautano-maglia', file: '01-640.jpg', cliente: 'ASD Falchi Cautano', cosa: 'Maglia da gioco' },
+  { slug: 'capo-tre-venti-sito', clip: 'ctv-1', cliente: 'Capo Tre Venti', cosa: 'Reel' },
   { slug: 'capo-tre-venti-sito', file: '04-640.jpg', cliente: 'Capo Tre Venti', cosa: 'Sito web' },
   { slug: 'tramontana-etichetta', file: '01-640.jpg', cliente: 'Capo Tre Venti', cosa: 'Etichetta Tramontana' },
+  { slug: 'capo-tre-venti-sito', clip: 'ctv-2', cliente: 'Capo Tre Venti', cosa: 'Reel' },
   { slug: 'feltagrifer-sito', file: '04-640.jpg', cliente: 'Feltagrifer', cosa: 'Sito web' },
   { slug: 'falchi-cautano-maglia', file: '06-640.jpg', cliente: 'ASD Falchi Cautano', cosa: 'Dettaglio manica' },
+  { slug: 'capo-tre-venti-sito', clip: 'ctv-3', cliente: 'Capo Tre Venti', cosa: 'Reel' },
   { slug: 'tramontana-etichetta', file: '02-640.jpg', cliente: 'Capo Tre Venti', cosa: 'Etichetta Tramontana' },
+  { slug: 'capo-tre-venti-sito', clip: 'ctv-4', cliente: 'Capo Tre Venti', cosa: 'Reel' },
 ];
+
+const slideMedia = (sl) =>
+  sl.clip
+    ? `<video data-src="/video/clip/${sl.clip}.mp4" poster="/video/clip/${sl.clip}.jpg" muted playsinline preload="none"></video>`
+    : `<img src="/img/progetti/${sl.slug}/${sl.file}" alt="">`;
 
 export default function home() {
   const manifesto =
@@ -31,7 +41,7 @@ export default function home() {
       <span class="line" aria-hidden="true"><span>al punto<span class="dot hero-dot"></span></span></span>
     </h1>
     <div class="hero-visual" aria-hidden="true">
-      <div class="hero-phone frame-phone is-dark"><div class="fp-bezel"><div class="fp-screen"><div class="fp-status"><span>9:41</span><span class="fp-island"></span><span class="fp-icons"><i></i><i></i></span></div><div class="fp-view hs-wrap">${heroSlides.map((sl, i) => `<a class="hs${i === 0 ? ' on' : ''}" href="/lavori/${sl.slug}/" tabindex="-1"><img src="/img/progetti/${sl.slug}/${sl.file}" alt=""><span class="hs-cap"><b>${esc(sl.cliente)}</b>${esc(sl.cosa)}</span></a>`).join('')}<span class="hs-bars">${heroSlides.map((_, i) => `<i${i === 0 ? ' class="on"' : ''}></i>`).join('')}</span></div></div></div></div>
+      <div class="hero-phone frame-phone is-dark"><div class="fp-bezel"><div class="fp-screen"><div class="fp-status"><span>9:41</span><span class="fp-island"></span><span class="fp-icons"><i></i><i></i></span></div><div class="fp-view hs-wrap">${heroSlides.map((sl, i) => `<a class="hs${i === 0 ? ' on' : ''}${sl.clip ? ' is-clip' : ''}" href="/lavori/${sl.slug}/" tabindex="-1">${slideMedia(sl)}<span class="hs-cap"><b>${esc(sl.cliente)}</b>${esc(sl.cosa)}</span></a>`).join('')}<span class="hs-bars">${heroSlides.map((_, i) => `<i${i === 0 ? ' class="on"' : ''}></i>`).join('')}</span></div></div></div></div>
     </div>
     <div class="hero-foot">
       <p class="hero-lead">Studio62 è uno studio creativo. Siti web, grafica e progetti di comunicazione per attività che vogliono farsi notare.</p>
