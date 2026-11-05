@@ -103,7 +103,8 @@ a:hover > .arr, a:hover .work-arrow .arr, .btn:hover .arr { transform: translate
   .menu-toggle { display: none; }
   .header-end .btn-small { display: inline-flex; }
 }
-@media (min-width: 1400px) { .avail { display: inline-flex; } }
+@media (min-width: 1560px) { .avail { display: inline-flex; } }
+.btn-small, .avail { white-space: nowrap; }
 @media (min-width: 900px) and (max-width: 1100px) { .main-nav { gap: 18px; } .header-end .btn-small { display: none; } }
 
 .menu { position: fixed; inset: 0; z-index: 35; background: var(--nero); color: var(--carta); padding-top: calc(var(--header-h) + env(safe-area-inset-top, 0px)); overflow-y: auto; }
@@ -231,6 +232,26 @@ body.menu-open .menu-toggle { border-color: var(--carta); }
 .ig-mini .ig-mark { padding: 7px; }
 .ig-mini .ig-id span { color: var(--grigio); font-size: 13px; }
 .ig-mini-btn { margin-left: 8px; padding: 8px 16px; border-radius: 999px; background: var(--punto); color: #fff; font-weight: 500; font-size: 14px; }
+
+/* Instagram in miniatura nella barra in alto */
+.ig-head { display: flex; align-items: center; gap: 10px; height: 46px; padding: 4px 5px 4px 4px; border-radius: 999px; background: var(--nero); color: var(--carta); text-decoration: none; flex: none; transition: transform .3s var(--ease); }
+.ig-head:hover { transform: translateY(-1px); }
+.ig-head .ig-avatar { width: 38px; height: 38px; padding: 2px; }
+.ig-head .ig-avatar::after { inset: 2px; box-shadow: 0 0 0 1.5px var(--nero); }
+.ig-head .ig-mark { padding: 6px; }
+.ig-head-id { display: none; line-height: 1.15; }
+.ig-head-id b { font-weight: 600; font-size: 13px; }
+.ig-head-id span { display: block; font-size: 11px; color: var(--grigio-chiaro); }
+.ig-head-grid { display: none; gap: 3px; }
+.ig-head-grid img { width: 24px; height: 30px; object-fit: cover; border-radius: 4px; }
+.ig-head-btn { display: none; padding: 7px 13px; border-radius: 999px; background: var(--punto); color: #fff; font-size: 13px; font-weight: 500; }
+.ig-head:hover .ig-head-btn { background: var(--punto-chiaro); }
+@media (min-width: 900px) { .ig-head { margin-right: 4px; } }
+@media (min-width: 1100px) { .ig-head { padding-left: 4px; padding-right: 5px; } .ig-head-id { display: block; padding-right: 2px; } .ig-head-btn { display: inline-block; } }
+@media (min-width: 1280px) { .ig-head-grid { display: flex; } }
+@media (min-width: 900px) and (max-width: 1100px) { .ig-head { height: 42px; padding: 2px; } .ig-head .ig-avatar { width: 38px; height: 38px; } }
+@media (max-width: 899px) { .ig-head { height: 40px; padding: 1px; background: transparent; } .ig-head .ig-avatar { width: 38px; height: 38px; } .ig-head .ig-avatar::after { box-shadow: 0 0 0 1.5px var(--carta); } }
+body.menu-open .ig-head .ig-avatar::after { box-shadow: 0 0 0 1.5px var(--nero); }
 
 /* ---------- Servizi (home) ---------- */
 .svc-list { border-top: 1px solid var(--linea); }

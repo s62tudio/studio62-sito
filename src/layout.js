@@ -16,6 +16,12 @@ function header(path) {
       <span class="brand-mark">${markSvg('brand-svg')}<span class="brand-fb" aria-hidden="true">F.B.</span></span>
       <span class="brand-word">Studio62</span>
     </a>
+    <a class="ig-head" href="${site.instagram.url}" rel="noopener" target="_blank" aria-label="Studio62 su Instagram, @${site.instagram.handle}" data-cursor="Segui">
+      <span class="ig-avatar">${markSvg('ig-mark')}</span>
+      <span class="ig-head-id"><b>@${site.instagram.handle}</b><span>Instagram</span></span>
+      <span class="ig-head-grid" aria-hidden="true"><img src="/img/progetti/falchi-cautano-maglia/01-640.jpg" alt=""><img src="/video/capo-tre-venti-reel.jpg" alt=""><img src="/img/progetti/tramontana-etichetta/01-640.jpg" alt=""></span>
+      <span class="ig-head-btn">Segui</span>
+    </a>
     <nav class="main-nav" aria-label="Principale">${links}</nav>
     <div class="header-end">
       ${site.available ? '<span class="avail"><i aria-hidden="true"></i>Disponibile per nuovi progetti</span>' : ''}
