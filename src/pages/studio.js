@@ -53,7 +53,7 @@ export default function studio() {
       <button type="button" class="glyph" data-to="B"><span class="g-front">2</span><span class="g-back">B</span><small>B · seconda lettera</small></button>
       <span class="code-dot dot"></span>
     </div>
-    <p class="lead studio-lead">Studio62 sono io, ${esc(site.owner)}. Il nome è un codice con le mie iniziali: F è la sesta lettera dell'alfabeto, B la seconda.</p>
+    <p class="lead studio-lead">Studio62 sono io, ${esc(site.owner)}. Il nome è un codice con le mie iniziali.</p>
   </div>
 </section>
 
