@@ -49,7 +49,10 @@ function videoBlock(p) {
       <p class="label">Reel</p>
       <h2 class="reel-title">${titled(v.titolo)}</h2>
       <p>${esc(v.testo)}</p>
-      <button class="reel-sound" type="button" aria-pressed="false"><span class="rs-off">Attiva l'audio</span><span class="rs-on">Disattiva l'audio</span></button>
+      <div class="reel-actions">
+        <button class="reel-sound" type="button" aria-pressed="false"><span class="rs-off">Attiva l'audio</span><span class="rs-on">Disattiva l'audio</span></button>
+        ${v.instagram ? `<a class="reel-ig link" href="${v.instagram}" rel="noopener" target="_blank">Guarda su Instagram ↗</a>` : ''}
+      </div>
     </div>
     <div class="reel-phone">
       <div class="frame-phone is-dark is-video"><div class="fp-bezel"><div class="fp-screen"><div class="fp-status" aria-hidden="true"><span>9:41</span><span class="fp-island"></span><span class="fp-icons"><i></i><i></i></span></div><div class="fp-view">

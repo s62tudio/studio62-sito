@@ -44,6 +44,7 @@ export const progetti = [
     // Video verticale (reel) mostrato dentro uno smartphone. File in public/video/<file>.mp4 e copertina <file>.jpg
     video: {
       file: 'capo-tre-venti-reel',
+      instagram: 'https://www.instagram.com/p/DfXW5zOMyaP/',
       titolo: 'Dal vigneto al digitale',
       testo: "Il reel che racconta il progetto: dal sito pensato prima di tutto per il telefono fino all'invito all'inaugurazione dell'agriturismo.",
     },

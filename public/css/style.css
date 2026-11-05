@@ -319,7 +319,9 @@ body.menu-open .menu-toggle { border-color: var(--carta); }
 .reel-text .label { color: var(--grigio-chiaro); }
 .reel-title { font-size: clamp(36px, 5vw, 72px); font-weight: 800; letter-spacing: -.05em; line-height: .95; }
 .reel-text p:not(.label) { color: var(--grigio-chiaro); max-width: 40ch; font-size: 17px; }
-.reel-sound { margin-top: 8px; display: inline-flex; align-items: center; gap: 10px; padding: 11px 18px; border-radius: 999px; border: 1px solid var(--linea-scura); background: transparent; color: var(--carta); font-weight: 500; cursor: pointer; transition: background .3s, border-color .3s; }
+.reel-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; margin-top: 8px; }
+.reel-ig { color: var(--carta); }
+.reel-sound { display: inline-flex; align-items: center; gap: 10px; padding: 11px 18px; border-radius: 999px; border: 1px solid var(--linea-scura); background: transparent; color: var(--carta); font-weight: 500; cursor: pointer; transition: background .3s, border-color .3s; }
 .reel-sound::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--grigio-chiaro); transition: background .3s; }
 .reel-sound:hover { border-color: var(--carta); }
 .reel-sound .rs-on { display: none; }
