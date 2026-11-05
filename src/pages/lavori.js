@@ -15,7 +15,7 @@ export default function lavori() {
   <div class="wrap">${workList(progetti, { filterable: true })}</div>
 </section>
 ${socialBlock()}
-${ctaBlock('Il prossimo lavoro', 'potrebbe essere il tuo')}
+${ctaBlock('Il prossimo progetto', 'potrebbe essere il tuo')}
 `;
   return layout({
     path: '/lavori/',

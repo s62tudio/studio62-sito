@@ -63,11 +63,11 @@ export default function studio() {
       <div class="portrait-ph">${markSvg('portrait-mark')}<span class="label">Foto in arrivo</span></div>
     </figure>
     <div class="studio-text">
-      <p class="big-p">Studio62 è nato quasi per caso, da un primo lavoro per un'attività vicino casa.</p>
-      <p>Da lì il passaparola ha fatto il resto. Oggi lavoro con realtà molto diverse tra loro, ma con una cosa in comune: hanno una storia che merita di essere raccontata bene.<br>Il mio compito è trovare il modo più chiaro per farlo, sulla carta e sullo schermo.</p>
+      <p class="big-p">Studio62 è nato quasi per caso, da un primo progetto per un'attività vicino casa.</p>
+      <p>Da lì il passaparola ha fatto il resto. Oggi collaboro con realtà molto diverse tra loro, ma con una cosa in comune: hanno una storia che merita di essere raccontata bene.<br>Il mio compito è trovare il modo più chiaro per farlo, sulla carta e sullo schermo.</p>
       <ul class="facts">
         <li><b>Grafica e informatica insieme</b><span>Un sito non è solo bello: va pubblicato, configurato e protetto. Grazie alle competenze in reti e sicurezza informatica, curo con la stessa attenzione anche la parte tecnica di ogni progetto.</span></li>
-        <li><b>Un solo referente</b><span>Parli sempre con chi fa il lavoro. Niente passaggi di mano, niente messaggi che si perdono.</span></li>
+        <li><b>Un solo referente</b><span>Parli sempre con chi segue il progetto. Niente passaggi di mano, niente messaggi che si perdono.</span></li>
         <li><b>Da remoto, ovunque</b><span>Lavoro dal mio computer, ovunque mi trovi. Ci sentiamo quando serve.</span></li>
         <li><b>Con altri professionisti, quando serve</b><span>Per fotografia e illustrazione mi affianco a professionisti del settore.</span></li>
       </ul>
@@ -77,7 +77,7 @@ export default function studio() {
 
 ${backgroundBox()}
 
-${ctaBlock('Lavoriamo insieme?', 'Partiamo da un messaggio')}
+${ctaBlock('Iniziamo un progetto?', 'Partiamo da un messaggio')}
 `;
   return layout({
     path: '/studio/',

@@ -60,7 +60,7 @@ export default function progetto(slug) {
       .join('')}</div>
     <div class="chapters">${chapter('La richiesta', p.richiesta)}${chapter("L'idea", p.idea)}</div>
     ${gallery(p, p.galleria.slice(0, half))}
-    <div class="chapters">${chapter('Il lavoro', p.lavoro)}</div>
+    <div class="chapters">${chapter('Il progetto', p.lavoro)}</div>
     ${gallery(p, p.galleria.slice(half))}
     <div class="chapters">${chapter('Il risultato', p.risultato)}</div>
     ${
