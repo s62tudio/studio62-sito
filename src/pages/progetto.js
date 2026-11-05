@@ -16,8 +16,13 @@ function framed(p, img, opts) {
   const pic = picture(p.slug, img, opts);
   if (!img.screen) return pic;
   if (isPhone(img))
-    return `<div class="frame-phone${img.dark ? ' is-dark' : ''}"><div class="fp-bezel"><div class="fp-screen"><div class="fp-status" aria-hidden="true"><span>9:41</span><span class="fp-island"></span><span class="fp-icons"><i></i><i></i></span></div><div class="fp-view">${pic}</div></div></div></div>`;
-  return `<div class="frame-laptop"><div class="fl-lid"><div class="fl-screen">${pic}</div></div><div class="fl-base" aria-hidden="true"></div></div>`;
+    return img.full
+      ? // screenshot già completo di barra di stato: occupa tutto lo schermo, senza tagli
+        `<div class="frame-phone is-full"><div class="fp-bezel"><div class="fp-screen"><div class="fp-view">${pic}</div></div></div></div>`
+      : `<div class="frame-phone${img.dark ? ' is-dark' : ''}"><div class="fp-bezel"><div class="fp-screen"><div class="fp-status" aria-hidden="true"><span>9:41</span><span class="fp-island"></span><span class="fp-icons"><i></i><i></i></span></div><div class="fp-view">${pic}</div></div></div></div>`;
+  // fit "contain": lo screenshot si vede intero, lo spazio che resta prende il colore di fondo del sito
+  const contain = img.fit === 'contain' ? ` is-contain" style="background:${img.bg || '#000'}` : '';
+  return `<div class="frame-laptop"><div class="fl-lid"><div class="fl-screen${contain}">${pic}</div></div><div class="fl-base" aria-hidden="true"></div></div>`;
 }
 
 // Raggruppa gli screenshot mobile consecutivi in un'unica fila

@@ -58,7 +58,7 @@ export const progetti = [
     link: { label: 'capotreventi.com', url: 'https://capotreventi.com' },
     seo: "Il sito della cantina Capo Tre Venti: storia, vini, degustazioni e agriturismo, in un'esperienza elegante su desktop e mobile.",
     cover: [
-      { file: '01', w: 1890, h: 847, sizes: [640, 1200, 1800], screen: true, alt: 'Homepage del sito Capo Tre Venti: "Poesia in ogni singolo sorso" sopra il vigneto' },
+      { file: '01', w: 1891, h: 902, sizes: [640, 1200, 1800], screen: true, fit: 'contain', bg: '#0f0f0f', alt: 'Homepage del sito Capo Tre Venti: "Poesia in ogni singolo sorso" sopra il vigneto, con l\'annuncio dell\'inaugurazione dell\'agriturismo' },
     ],
     richiesta: 'Un sito elegante che rappresenti al meglio il lavoro della cantina.',
     idea:
@@ -68,10 +68,10 @@ export const progetti = [
     risultato:
       "Il sito è online e accompagnerà l'apertura dell'agriturismo, il 21 novembre 2026, insieme alla promozione sui social.",
     galleria: [
-      { file: '02', w: 1877, h: 851, sizes: [640, 1200, 1800], span: 'full', screen: true, alt: 'Pagina I nostri vini con Scirocco, Tramontana e Bora' },
-      { file: '04', w: 952, h: 1600, sizes: [640, 952], span: 'half', screen: true, alt: 'Homepage su mobile' },
-      { file: '05', w: 824, h: 1600, sizes: [640, 824], span: 'half', screen: true, dark: true, alt: 'Pagina La cantina su mobile: Custodi di un territorio magico' },
-      { file: '03', w: 1890, h: 852, sizes: [640, 1200, 1800], span: 'full', screen: true, alt: 'Scheda del vino Tramontana con ingredienti, valori nutrizionali e smaltimento' },
+      { file: '02', w: 1885, h: 900, sizes: [640, 1200, 1800], span: 'full', screen: true, fit: 'contain', bg: '#121212', alt: 'Pagina dei vini: Tramontana al centro, Scirocco e Bora in arrivo' },
+      { file: '04', w: 738, h: 1600, sizes: [640, 738], span: 'half', screen: true, full: true, alt: 'Su telefono: il nome Capo Tre Venti e i tre vini Scirocco, Tramontana e Bora' },
+      { file: '05', w: 738, h: 1600, sizes: [640, 738], span: 'half', screen: true, full: true, alt: "Su telefono: Vivi l'Esperienza, info e prenotazioni" },
+      { file: '03', w: 1894, h: 902, sizes: [640, 1200, 1800], span: 'full', screen: true, fit: 'contain', bg: '#0f0f0f', alt: 'Gallery del sito con filtri: vigneti, uliveti, territorio e cantina' },
     ],
   },
   {
