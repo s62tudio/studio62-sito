@@ -143,6 +143,22 @@
     }
   });
 
+  /* Hero: progetti che scorrono nello smartphone, come le storie */
+  const slides = $$('.hero-phone .hs');
+  if (slides.length) {
+    const bars = $$('.hero-phone .hs-bars i');
+    const T = 2800; let k = 0;
+    const show = (n) => {
+      slides[k].classList.remove('on'); k = n; slides[k].classList.add('on');
+      bars.forEach((b, i) => { b.classList.toggle('done', i < k); b.classList.remove('on'); });
+      void bars[k].offsetWidth; bars[k].classList.add('on');
+    };
+    document.documentElement.style.setProperty('--hs-t', T + 'ms');
+    if (!reduce) setInterval(() => show((k + 1) % slides.length), T);
+    const ph = $('.hero-phone');
+    if (!reduce) addEventListener('scroll', () => requestAnimationFrame(() => ph.style.setProperty('--py', (scrollY * -0.12).toFixed(1) + 'px')), { passive: true });
+  }
+
   /* Copia email */
   $$('[data-copy]').forEach((b) =>
     b.addEventListener('click', async () => {
