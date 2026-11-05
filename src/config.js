@@ -32,7 +32,7 @@ export const collaborazioni = [
     nome: 'Siti web',
     frase: 'Un sito chiaro anche dal telefono, pubblicato e configurato per farsi trovare su Google.',
     include: ['Progetto e design', 'Pubblicazione, dominio e DNS', 'Versione mobile curata', 'Google Search Console'],
-    esempio: 'feltagrifer-sito',
+    esempio: 'capo-tre-venti-sito',
   },
   {
     id: 'grafica',
