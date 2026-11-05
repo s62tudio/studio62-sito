@@ -79,10 +79,6 @@ export const faq = [
     r: 'Dipende dal progetto. Prima di iniziare si definisce cosa verrà consegnato e in quanto tempo, con aggiornamenti a ogni passaggio.',
   },
   {
-    d: 'Viene rilasciata fattura?',
-    r: 'No: Studio62 collabora su progetti singoli con prestazione occasionale e rilascia una ricevuta. Se ti serve qualcosa di continuativo, se ne parla e si trova la soluzione giusta.',
-  },
-  {
     d: 'Si può lavorare anche a distanza?',
     r: 'Sì. Studio62 lavora da remoto: ci si sente in videochiamata, al telefono o per messaggio, ovunque tu sia.',
   },
