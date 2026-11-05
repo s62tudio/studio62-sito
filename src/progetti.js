@@ -41,6 +41,12 @@ export const progetti = [
   },
   {
     slug: 'capo-tre-venti-sito',
+    // Video verticale (reel) mostrato dentro uno smartphone. File in public/video/<file>.mp4 e copertina <file>.jpg
+    video: {
+      file: 'capo-tre-venti-reel',
+      titolo: 'Dal vigneto al digitale',
+      testo: "Il reel che racconta il progetto: dal sito pensato prima di tutto per il telefono fino all'invito all'inaugurazione dell'agriturismo.",
+    },
     cliente: 'Capo Tre Venti',
     titolo: "Dalla cantina all'agriturismo, in un sito solo",
     breve: 'Sito web',

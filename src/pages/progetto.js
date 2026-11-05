@@ -40,6 +40,25 @@ function renderGroup(p, g) {
   return `<figure class="g-item g-${img.span}${img.screen ? ' is-screen' : ''}">${framed(p, img, { sizes: spanSizes[img.span] })}</figure>`;
 }
 
+function videoBlock(p) {
+  const v = p.video;
+  if (!v) return '';
+  const src = `/video/${v.file}`;
+  return `<section class="reel" aria-label="${esc(v.titolo)}">
+    <div class="reel-text">
+      <p class="label">Reel</p>
+      <h2 class="reel-title">${titled(v.titolo)}</h2>
+      <p>${esc(v.testo)}</p>
+      <button class="reel-sound" type="button" aria-pressed="false"><span class="rs-off">Attiva l'audio</span><span class="rs-on">Disattiva l'audio</span></button>
+    </div>
+    <div class="reel-phone">
+      <div class="frame-phone is-dark is-video"><div class="fp-bezel"><div class="fp-screen"><div class="fp-status" aria-hidden="true"><span>9:41</span><span class="fp-island"></span><span class="fp-icons"><i></i><i></i></span></div><div class="fp-view">
+        <video class="reel-video" src="${src}.mp4" poster="${src}.jpg" muted loop playsinline preload="none" aria-label="${esc(v.titolo)}: video del progetto ${esc(p.cliente)}"></video>
+      </div></div></div></div>
+    </div>
+  </section>`;
+}
+
 function gallery(p, gs) {
   if (!gs.length) return '';
   return `<div class="gallery">${gs.map((g) => renderGroup(p, g)).join('')}</div>`;
@@ -89,6 +108,7 @@ export default function progetto(slug) {
     ${gallery(p, gs.slice(0, half))}
     <div class="chapters">${chapter('Il progetto', p.lavoro)}</div>
     ${gallery(p, gs.slice(half))}
+    ${videoBlock(p)}
     <div class="chapters">${chapter('Il risultato', p.risultato)}</div>
     ${
       sibling

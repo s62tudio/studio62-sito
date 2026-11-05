@@ -113,6 +113,36 @@
     move();
   }
 
+  /* Reel: parte quando è visibile, si ferma quando esce dallo schermo */
+  $$('.reel').forEach((box) => {
+    const video = $('video', box);
+    const sound = $('.reel-sound', box);
+    if (!video) return;
+    let userPaused = false;
+    const play = () => { if (!userPaused) video.play().catch(() => {}); };
+    if ('IntersectionObserver' in window && !reduce) {
+      new IntersectionObserver((en) => en.forEach((e) => (e.isIntersecting ? play() : video.pause())), { threshold: 0.35 }).observe(video);
+    }
+    video.addEventListener('click', () => {
+      if (video.paused) { userPaused = false; video.play().catch(() => {}); } else { userPaused = true; video.pause(); }
+    });
+    sound?.addEventListener('click', () => {
+      video.muted = !video.muted;
+      sound.setAttribute('aria-pressed', String(!video.muted));
+      if (!video.muted) { userPaused = false; video.play().catch(() => {}); }
+    });
+    const ph = $('.frame-phone', box);
+    if (ph && !reduce) {
+      const move = () => {
+        const r = box.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > innerHeight) return;
+        ph.style.setProperty('--py', ((r.top + r.height / 2 - innerHeight / 2) * 0.08).toFixed(1) + 'px');
+      };
+      addEventListener('scroll', () => requestAnimationFrame(move), { passive: true });
+      move();
+    }
+  });
+
   /* Copia email */
   $$('[data-copy]').forEach((b) =>
     b.addEventListener('click', async () => {
