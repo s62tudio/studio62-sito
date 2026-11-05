@@ -68,7 +68,7 @@ export default function studio() {
       <ul class="facts">
         <li><b>Grafica e informatica insieme</b><span>Un sito non è solo bello: va pubblicato, configurato e protetto. Grazie alle competenze in reti e sicurezza informatica, curo con la stessa attenzione anche la parte tecnica di ogni progetto.</span></li>
         <li><b>Un solo referente</b><span>Parli sempre con chi segue il progetto. Niente passaggi di mano, niente messaggi che si perdono.</span></li>
-        <li><b>Da remoto, ovunque</b><span>Lavoro dal mio computer, ovunque mi trovi. Ci sentiamo quando serve.</span></li>
+        <li><b>Da remoto, ovunque</b><span>Basta un computer, mi trovi ovunque. Ci sentiamo quando serve.</span></li>
         <li><b>Con altri professionisti, quando serve</b><span>Per fotografia e illustrazione mi affianco a professionisti del settore.</span></li>
       </ul>
     </div>
