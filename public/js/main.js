@@ -63,6 +63,7 @@
     $$('.work-row', work).forEach((row) => {
       row.addEventListener('pointerenter', (e) => {
         img.src = row.dataset.preview;
+        prev.style.setProperty('--pos', row.style.getPropertyValue('--pos') || 'center');
         if (!prev.classList.contains('on')) { px = tx = e.clientX; py = ty = e.clientY; }
         prev.classList.add('on');
         if (!raf) raf = requestAnimationFrame(loop);

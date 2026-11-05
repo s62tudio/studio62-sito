@@ -7,7 +7,7 @@ export function workList(items, { filterable = false } = {}) {
     .map((p) => {
       const tags = p.tipo.map((t) => tipi[t]).join(' · ');
       return `<li class="work-item" data-tipo="${p.tipo.join(' ')}">
-      <a class="work-row" href="/lavori/${p.slug}/" data-preview="${thumbUrl(p.slug, p.cover[0])}" data-cursor="Apri">
+      <a class="work-row" href="/lavori/${p.slug}/" data-preview="${thumbUrl(p.slug, p.cover[0])}"${p.cover[0].pos ? ` style="--pos: ${p.cover[0].pos}"` : ''} data-cursor="Apri">
         ${picture(p.slug, p.cover[0], { cls: 'work-thumb', sizes: '(min-width: 900px) 1px, 100vw' })}
         <span class="work-client">${esc(p.cliente)}</span>
         <span class="work-title">${esc(p.titolo)}</span>

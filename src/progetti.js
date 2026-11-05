@@ -20,7 +20,7 @@ export const progetti = [
     link: null,
     seo: 'Design della maglia da gioco per ASD Falchi Cautano: nero dominante, rosso e blu in asimmetria, il falco sulla manica.',
     cover: [
-      { file: '01', w: 3107, h: 4661, sizes: [640, 1200, 1800], alt: 'Giocatore in campo con la nuova maglia nera dei Falchi Cautano, un piede sul pallone' },
+      { file: '01', w: 3107, h: 4661, sizes: [640, 1200, 1800], pos: 'center 18%', alt: 'Giocatore in campo con la nuova maglia nera dei Falchi Cautano, un piede sul pallone' },
       { file: '02', w: 3520, h: 5280, sizes: [640, 1200, 1800], alt: 'La maglia appesa nello spogliatoio: nero, manica rossa e manica blu' },
     ],
     richiesta: 'Una nuova maglia da gioco per la squadra.',
