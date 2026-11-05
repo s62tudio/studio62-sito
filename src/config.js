@@ -146,12 +146,6 @@ export const percorso = {
       voci: ['Grafiche per campagne pubblicitarie e contenuti social', 'Supporto alla gestione di siti WordPress', 'Affiancamento nelle attività sistemistiche'],
     },
     {
-      periodo: 'Giugno 2025 – Giugno 2026',
-      titolo: 'Servizio Civile Universale',
-      ente: 'Comune di Cautano · progetto "Campania Sicura 2024"',
-      voci: ['Supporto al personale comunale e digitalizzazione di schede e dati', 'Materiale informativo e social del progetto, stand ed eventi pubblici'],
-    },
-    {
       periodo: 'In corso',
       titolo: 'Studio62 · Web e graphic design',
       ente: 'Progetti per attività del territorio',
