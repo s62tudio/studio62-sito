@@ -1,4 +1,4 @@
-import { site, clienti, percorso } from '../config.js';
+import { site, percorso } from '../config.js';
 import { layout, ctaBlock } from '../layout.js';
 import { esc, markSvg } from '../lib.js';
 
@@ -71,15 +71,6 @@ export default function studio() {
         <li><b>Da remoto, ovunque</b><span>Lavoro dal mio computer, ovunque mi trovi. Ci sentiamo quando serve.</span></li>
         <li><b>Con altri professionisti, quando serve</b><span>Per fotografia e illustrazione mi affianco a professionisti del settore.</span></li>
       </ul>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="label">Clienti</p>
-      <div><p class="clients-big">${clienti.map((c) => `<span class="nowrap">${esc(c)}<span class="dot" aria-hidden="true"></span></span>`).join(' ')}</p></div>
     </div>
   </div>
 </section>

@@ -1,4 +1,4 @@
-import { site, collaborazioni, metodo, clienti } from '../config.js';
+import { site, collaborazioni, metodo } from '../config.js';
 import { progetti } from '../progetti.js';
 import { layout, ctaBlock } from '../layout.js';
 import { workList, socialBlock } from '../components.js';
@@ -27,7 +27,6 @@ export default function home() {
         <a class="link" href="/contatti/">Inizia un progetto</a>
       </div>
     </div>
-    <p class="clients"><span class="label">Clienti</span> <span>${clienti.map(esc).join('<i aria-hidden="true">·</i>')}</span></p>
   </div>
 </section>
 
