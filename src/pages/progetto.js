@@ -15,7 +15,8 @@ const isPhone = (img) => img.screen && img.h > img.w * 1.6;
 function framed(p, img, opts) {
   const pic = picture(p.slug, img, opts);
   if (!img.screen) return pic;
-  if (isPhone(img)) return `<div class="frame-phone"><div class="fp-screen">${pic}</div></div>`;
+  if (isPhone(img))
+    return `<div class="frame-phone${img.dark ? ' is-dark' : ''}"><div class="fp-bezel"><div class="fp-screen"><div class="fp-status" aria-hidden="true"><span>9:41</span><span class="fp-island"></span><span class="fp-icons"><i></i><i></i></span></div><div class="fp-view">${pic}</div></div></div></div>`;
   return `<div class="frame-laptop"><div class="fl-lid"><div class="fl-screen">${pic}</div></div><div class="fl-base" aria-hidden="true"></div></div>`;
 }
 

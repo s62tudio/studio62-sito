@@ -96,6 +96,23 @@
     update();
   }
 
+  /* Telefoni nei case study: parallasse leggera mentre si scorre */
+  const phones = $$('.is-phones .frame-phone');
+  if (phones.length && !reduce) {
+    let ticking = false;
+    const move = () => {
+      ticking = false;
+      phones.forEach((ph, i) => {
+        const box = ph.parentElement.getBoundingClientRect();
+        if (box.bottom < 0 || box.top > innerHeight) return;
+        const d = box.top + box.height / 2 - innerHeight / 2;
+        ph.style.setProperty('--py', (d * (i % 2 ? -0.06 : 0.1)).toFixed(1) + 'px');
+      });
+    };
+    addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(move); } }, { passive: true });
+    move();
+  }
+
   /* Copia email */
   $$('[data-copy]').forEach((b) =>
     b.addEventListener('click', async () => {

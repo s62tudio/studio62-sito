@@ -63,7 +63,7 @@ export const progetti = [
     galleria: [
       { file: '02', w: 1877, h: 851, sizes: [640, 1200, 1800], span: 'full', screen: true, alt: 'Pagina I nostri vini con Scirocco, Tramontana e Bora' },
       { file: '04', w: 952, h: 1600, sizes: [640, 952], span: 'half', screen: true, alt: 'Homepage su mobile' },
-      { file: '05', w: 824, h: 1600, sizes: [640, 824], span: 'half', screen: true, alt: 'Pagina La cantina su mobile: Custodi di un territorio magico' },
+      { file: '05', w: 824, h: 1600, sizes: [640, 824], span: 'half', screen: true, dark: true, alt: 'Pagina La cantina su mobile: Custodi di un territorio magico' },
       { file: '03', w: 1890, h: 852, sizes: [640, 1200, 1800], span: 'full', screen: true, alt: 'Scheda del vino Tramontana con ingredienti, valori nutrizionali e smaltimento' },
     ],
   },
