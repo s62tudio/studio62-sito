@@ -16,7 +16,7 @@ export const progetti = [
     anno: 2026,
     tipo: ['sportswear', 'grafica'],
     servizio: 'Sportswear design',
-    crediti: [{ ruolo: 'Foto', nome: 'Giovanni Glorioso' }],
+    crediti: [],
     link: null,
     seo: 'Design della maglia da gioco per ASD Falchi Cautano: nero dominante, rosso e blu in asimmetria, il falco sulla manica.',
     cover: [
@@ -75,10 +75,7 @@ export const progetti = [
     anno: 2026,
     tipo: ['grafica'],
     servizio: 'Graphic & label design',
-    crediti: [
-      { ruolo: 'Illustrazione con', nome: '@bat_artattack' },
-      { ruolo: 'Foto', nome: 'Giovanni Glorioso' },
-    ],
+    crediti: [],
     link: null,
     seo: "L'etichetta della Falanghina Tramontana di Capo Tre Venti: il paesaggio del vigneto ridisegnato a mano, con dettagli in rilievo.",
     cover: [
@@ -87,7 +84,7 @@ export const progetti = [
     ],
     richiesta: "L'etichetta per Tramontana, la Falanghina della cantina Capo Tre Venti.",
     idea:
-      "Tutto parte da una foto vera del vigneto immerso nel paesaggio. Quella scena è stata rielaborata e ridisegnata a mano insieme all'illustratore @bat_artattack, fino a diventare un'illustrazione su misura che lega il territorio al vino.",
+      "Tutto parte da una foto vera del vigneto immerso nel paesaggio. Quella scena è stata rielaborata fino a diventare un'illustrazione su misura, che lega il territorio al vino.",
     lavoro:
       "Progetto grafico realizzato in Adobe Illustrator. Particolare attenzione alla stampa e alle finiture: dettagli in rilievo che danno volume e rendono l'etichetta da toccare, oltre che da guardare. Sul retro, un QR code porta direttamente alla scheda del vino sul sito della cantina, con ingredienti e valori nutrizionali.",
     risultato: null,

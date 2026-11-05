@@ -69,7 +69,7 @@ export default function studio() {
         <li><b>Grafica e tecnica insieme</b><span>Un sito non è solo bello: va pubblicato, configurato e tenuto in ordine. Curo anche quella parte.</span></li>
         <li><b>Un solo referente</b><span>Parli sempre con chi fa il lavoro. Niente passaggi di mano, niente messaggi che si perdono.</span></li>
         <li><b>Da remoto, ovunque</b><span>Lavoro dal mio computer, ovunque mi trovi. Ci sentiamo quando serve.</span></li>
-        <li><b>Con altri professionisti, quando serve</b><span>Per la fotografia lavoro con Giovanni Glorioso, per l'illustrazione con @bat_artattack.</span></li>
+        <li><b>Con altri professionisti, quando serve</b><span>Per fotografia e illustrazione mi affianco a professionisti del settore.</span></li>
       </ul>
     </div>
   </div>
