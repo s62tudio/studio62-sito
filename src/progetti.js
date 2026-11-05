@@ -110,23 +110,23 @@ export const progetti = [
     servizio: 'Web design & UI/UX · SEO',
     crediti: [],
     link: { label: 'feltagrifer.com', url: 'https://feltagrifer.com' },
-    seo: 'Il sito di Feltagrifer, rivenditore di macchine agricole: un catalogo vasto organizzato per categoria, marchio e utilizzo, dal prodotto al preventivo.',
+    seo: 'Il sito di Feltagrifer, rivenditore di macchine agricole, giardinaggio e movimento terra: promozioni, catalogo filtrabile per categoria, marchio e utilizzo, noleggio e preventivi in un clic.',
     cover: [
-      { file: '01', w: 1895, h: 862, sizes: [640, 1200, 1800], screen: true, alt: 'Homepage Feltagrifer con la promozione autunno-inverno' },
+      { file: '01', w: 1903, h: 939, sizes: [640, 1200, 1800], screen: true, fit: 'contain', bg: '#f6f7f4', alt: 'Homepage Feltagrifer: i marchi trattati in alto, il menu verde e la promozione autunno-inverno Blue Bird' },
     ],
     richiesta:
       'Il nuovo sito di Feltagrifer srl, rivenditore autorizzato di macchine agricole, attrezzature da giardino e macchine movimento terra.',
     idea:
-      'Trasformare un catalogo vasto e articolato in qualcosa di semplice da esplorare: prodotti per categoria, marchio e utilizzo, sezioni per promozioni, usato e noleggio, e una vetrina dei marchi trattati.',
+      "Tanti marchi e tanti servizi diversi: vendita, usato, noleggio, promozioni. L'idea è rendere tutto facile da trovare: i marchi trattati in vista fin dalla prima riga, il verde e l'oro dell'azienda a fare da guida, e il preventivo sempre a un clic, da qualsiasi pagina.",
     lavoro:
-      'Ogni pagina accompagna dalla ricerca del prodotto giusto fino alla richiesta di preventivo. Chiamata, WhatsApp ed email sono sempre a portata di mano: in una barra laterale su desktop e in basso su telefono.',
+      "In homepage le promozioni scorrono in un carosello, come l'offerta autunno-inverno Blue Bird con prezzi e scadenza, e otto soluzioni portano dritte alle categorie: trattori, escavatori, trinciatrici, attrezzatura agricola, motoseghe, potatura, macchine a batteria e noleggio. Il catalogo si filtra per categoria, marchio e utilizzo, e ogni prodotto ha il suo \"Richiedi info\". Su desktop WhatsApp, telefono, email e social stanno in una barra laterale; su telefono una barra in basso con Chiama, WhatsApp e Preventivo accompagna ogni pagina, dalle offerte come la Solis S90 al noleggio a breve, medio e lungo termine.",
     risultato:
       'Il sito è stampato come QR code sui biglietti da visita. Feltagrifer visita molte aziende, così il catalogo arriva direttamente a chi deve sceglierlo.',
     galleria: [
-      { file: '02', w: 1881, h: 861, sizes: [640, 1200, 1800], span: 'full', screen: true, alt: 'Catalogo prodotti con filtri per categoria, marchio e utilizzo' },
-      { file: '04', w: 822, h: 1600, sizes: [640, 822], span: 'half', screen: true, alt: 'Pagina dei marchi su mobile, con la barra Chiama, WhatsApp, Preventivo' },
-      { file: '05', w: 962, h: 1600, sizes: [640, 962], span: 'half', screen: true, alt: 'Ricerca con suggerimenti su mobile' },
-      { file: '03', w: 1886, h: 861, sizes: [640, 1200, 1800], span: 'full', screen: true, alt: 'Pagina promozioni con le offerte in corso' },
+      { file: '02', w: 1893, h: 940, sizes: [640, 1200, 1800], span: 'full', screen: true, fit: 'contain', bg: '#f6f7f4', alt: 'Le nostre soluzioni: otto categorie, dai trattori Solis al noleggio' },
+      { file: '04', w: 738, h: 1600, sizes: [640, 738], span: 'half', screen: true, full: true, alt: "Su telefono: l'offerta Solis S90 Shuttle XL con la barra Chiama, WhatsApp, Preventivo" },
+      { file: '05', w: 738, h: 1600, sizes: [640, 738], span: 'half', screen: true, full: true, alt: 'Su telefono: i settori di noleggio, a partire dal movimento terra' },
+      { file: '03', w: 1901, h: 937, sizes: [640, 1200, 1800], span: 'full', screen: true, fit: 'contain', bg: '#f6f7f4', alt: 'Catalogo prodotti con filtri per categoria, brand e utilizzo e il pulsante Richiedi info su ogni scheda' },
     ],
   },
 ];
