@@ -11,13 +11,12 @@ const spanSizes = {
 
 const isPhone = (img) => img.screen && img.h > img.w * 1.6;
 
-// Screenshot desktop dentro una finestra del browser, screenshot mobile dentro un telefono
+// Screenshot desktop dentro un portatile, screenshot mobile dentro un telefono
 function framed(p, img, opts) {
   const pic = picture(p.slug, img, opts);
   if (!img.screen) return pic;
   if (isPhone(img)) return `<div class="frame-phone"><div class="fp-screen">${pic}</div></div>`;
-  const url = p.link ? esc(p.link.label) : '';
-  return `<div class="frame-browser"><div class="fb-bar" aria-hidden="true"><i></i><i></i><i></i><span class="fb-url">${url}</span></div>${pic}</div>`;
+  return `<div class="frame-laptop"><div class="fl-lid"><div class="fl-screen">${pic}</div></div><div class="fl-base" aria-hidden="true"></div></div>`;
 }
 
 // Raggruppa gli screenshot mobile consecutivi in un'unica fila
