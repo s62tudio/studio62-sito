@@ -259,7 +259,18 @@ body.menu-open .menu-toggle { border-color: var(--carta); }
 .g-item img { width: 100%; height: 100%; object-fit: cover; }
 .g-item.is-screen { padding: clamp(14px, 3.4vw, 56px); display: grid; place-items: center; }
 .g-item.is-screen img { border-radius: clamp(6px, .8vw, 12px); box-shadow: 0 1px 2px rgba(17,17,17,.06), 0 18px 50px -18px rgba(17,17,17,.28); height: auto; }
-.g-item.is-phone img { width: auto; max-height: min(78vh, 760px); }
+.g-item.is-screen { background: var(--superficie); }
+.frame-browser { width: 100%; border-radius: clamp(8px, 1vw, 14px); overflow: hidden; background: #fff; box-shadow: 0 1px 2px rgba(17,17,17,.06), 0 30px 60px -28px rgba(17,17,17,.35); }
+.frame-browser img { border-radius: 0 !important; box-shadow: none !important; width: 100%; height: auto; }
+.fb-bar { height: clamp(22px, 2.6vw, 38px); display: flex; align-items: center; gap: clamp(4px, .5vw, 8px); padding: 0 clamp(8px, 1vw, 14px); background: #F7F7F5; border-bottom: 1px solid #E6E5E0; }
+.fb-bar i { width: clamp(6px, .75vw, 11px); height: clamp(6px, .75vw, 11px); border-radius: 50%; background: #D9D8D2; flex: none; }
+.fb-url { margin-left: clamp(6px, 1.2vw, 18px); flex: 0 1 420px; min-width: 0; height: clamp(14px, 1.5vw, 22px); border-radius: 99px; background: #EDECE7; font-size: clamp(9px, .85vw, 12px); color: var(--grigio); display: flex; align-items: center; padding-left: 12px; overflow: hidden; white-space: nowrap; }
+.g-item.is-phones { display: flex; justify-content: center; align-items: flex-start; gap: clamp(16px, 4vw, 64px); }
+.frame-phone { width: clamp(130px, 22vw, 290px); flex: none; border-radius: clamp(22px, 3.2vw, 44px); background: #111; padding: clamp(5px, .7vw, 10px); box-shadow: 0 30px 60px -26px rgba(17,17,17,.45); }
+.fp-screen { position: relative; border-radius: clamp(17px, 2.6vw, 35px); overflow: hidden; aspect-ratio: 9 / 17; background: #000; }
+.fp-screen picture { position: absolute; inset: 0; }
+.fp-screen img { width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 0 !important; box-shadow: none !important; }
+
 .chapters { display: grid; gap: 36px; padding-block: clamp(48px, 7vw, 96px); }
 .chapters:empty { display: none; }
 .chapter { display: grid; gap: 12px; }
