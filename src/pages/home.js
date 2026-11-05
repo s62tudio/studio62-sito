@@ -7,16 +7,14 @@ import { esc, arrow } from '../lib.js';
 // Immagini che scorrono nello smartphone accanto al titolo
 // clip: spezzone del reel (public/video/clip/<clip>.mp4), della stessa durata delle foto
 const heroSlides = [
-  { slug: 'falchi-cautano-maglia', file: '01-640.jpg', cliente: 'ASD Falchi Cautano', cosa: 'Maglia da gioco' },
   { slug: 'capo-tre-venti-sito', clip: 'ctv-1', cliente: 'Capo Tre Venti', cosa: 'Reel' },
-  { slug: 'capo-tre-venti-sito', file: '04-640.jpg', cliente: 'Capo Tre Venti', cosa: 'Sito web' },
+  { slug: 'falchi-cautano-maglia', file: '01-640.jpg', cliente: 'ASD Falchi Cautano', cosa: 'Maglia da gioco' },
   { slug: 'tramontana-etichetta', file: '01-640.jpg', cliente: 'Capo Tre Venti', cosa: 'Etichetta Tramontana' },
   { slug: 'capo-tre-venti-sito', clip: 'ctv-2', cliente: 'Capo Tre Venti', cosa: 'Reel' },
   { slug: 'feltagrifer-sito', file: '04-640.jpg', cliente: 'Feltagrifer', cosa: 'Sito web' },
   { slug: 'falchi-cautano-maglia', file: '06-640.jpg', cliente: 'ASD Falchi Cautano', cosa: 'Dettaglio manica' },
   { slug: 'capo-tre-venti-sito', clip: 'ctv-3', cliente: 'Capo Tre Venti', cosa: 'Reel' },
   { slug: 'tramontana-etichetta', file: '02-640.jpg', cliente: 'Capo Tre Venti', cosa: 'Etichetta Tramontana' },
-  { slug: 'capo-tre-venti-sito', clip: 'ctv-4', cliente: 'Capo Tre Venti', cosa: 'Reel' },
 ];
 
 const slideMedia = (sl) =>

@@ -152,6 +152,9 @@
     // Gli spezzoni del reel partono dall'inizio quando arriva il loro turno; il successivo si carica in anticipo
     const vidOf = (n) => $('video', slides[n]);
     const load = (v) => { if (v && !v.src) { v.src = v.dataset.src; v.load(); } };
+    // Se il primo contenuto è uno spezzone, parte subito
+    const first = vidOf(0);
+    if (first) { load(first); if (!reduce) first.play().catch(() => {}); }
     load(vidOf(1));
     const show = (n) => {
       const old = vidOf(k); if (old) setTimeout(() => old.pause(), 900);
