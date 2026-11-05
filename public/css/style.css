@@ -313,7 +313,7 @@ body.menu-open .menu-toggle { border-color: var(--carta); }
 .next:hover .next-client { color: var(--punto-chiaro); }
 
 /* ---------- Reel nel case study ---------- */
-.reel { display: grid; gap: clamp(32px, 5vw, 64px); align-items: center; margin-top: 12px; padding: clamp(36px, 6vw, 88px) clamp(20px, 5vw, 80px); border-radius: var(--r-img); background: var(--nero); color: var(--carta); overflow: hidden; }
+.reel { display: grid; gap: clamp(32px, 5vw, 64px); align-items: center; margin-bottom: 12px; padding: clamp(36px, 6vw, 88px) clamp(20px, 5vw, 80px); border-radius: var(--r-img); background: var(--nero); color: var(--carta); overflow: hidden; }
 @media (min-width: 900px) { .reel { grid-template-columns: 6fr 5fr; } }
 .reel-text { display: grid; gap: 18px; justify-items: start; }
 .reel-text .label { color: var(--grigio-chiaro); }

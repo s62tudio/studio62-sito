@@ -101,6 +101,7 @@ export default function progetto(slug) {
     </div>
   </header>
   <div class="wrap">
+    ${videoBlock(p)}
     <div class="${cover}">${p.cover
       .map((img, n) => `<figure class="g-item${img.screen ? ' is-screen' : ''}">${framed(p, img, { eager: n === 0, sizes: p.cover.length > 1 ? '(min-width: 900px) 50vw, 100vw' : '100vw' })}</figure>`)
       .join('')}</div>
@@ -108,7 +109,6 @@ export default function progetto(slug) {
     ${gallery(p, gs.slice(0, half))}
     <div class="chapters">${chapter('Il progetto', p.lavoro)}</div>
     ${gallery(p, gs.slice(half))}
-    ${videoBlock(p)}
     <div class="chapters">${chapter('Il risultato', p.risultato)}</div>
     ${
       sibling
