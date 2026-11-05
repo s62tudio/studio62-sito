@@ -1,7 +1,7 @@
 import { site, collaborazioni, metodo } from '../config.js';
 import { progetti } from '../progetti.js';
 import { layout, ctaBlock } from '../layout.js';
-import { workList, socialBlock } from '../components.js';
+import { workList, socialBlock, instagramBlock } from '../components.js';
 import { esc, arrow } from '../lib.js';
 
 export default function home() {
@@ -53,6 +53,8 @@ export default function home() {
 </section>
 
 ${socialBlock()}
+
+${instagramBlock()}
 
 <section class="section">
   <div class="wrap">

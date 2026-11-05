@@ -1,6 +1,6 @@
 import { site, collaborazioni } from '../config.js';
 import { layout } from '../layout.js';
-import { esc } from '../lib.js';
+import { esc, markSvg } from '../lib.js';
 
 export default function contatti() {
   const body = `
@@ -18,7 +18,13 @@ export default function contatti() {
         <div><span class="label">Email</span>
           <button class="copy copy-dark" type="button" data-copy="${site.email}"><span class="copy-text">${site.email}</span><span class="copy-hint" aria-live="polite">Copia</span></button>
         </div>
-        <div><span class="label">Instagram</span><a class="link" href="${site.instagram.url}" rel="noopener" target="_blank">@${site.instagram.handle}</a></div>
+        <div><span class="label">Instagram</span>
+          <a class="ig-mini" href="${site.instagram.url}" rel="noopener" target="_blank" data-cursor="Segui">
+            <span class="ig-avatar">${markSvg('ig-mark')}</span>
+            <span class="ig-id"><b>@${site.instagram.handle}</b><span>Progetti, anteprime e dietro le quinte</span></span>
+            <span class="ig-mini-btn">Segui</span>
+          </a>
+        </div>
       </div>
     </div>
     <form class="form" name="contatti" method="POST" data-netlify="true" netlify-honeypot="sito-web" novalidate>

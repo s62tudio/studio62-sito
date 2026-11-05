@@ -1,6 +1,6 @@
 import { progetti } from '../progetti.js';
 import { layout, ctaBlock } from '../layout.js';
-import { workList, socialBlock } from '../components.js';
+import { workList, socialBlock, instagramBlock } from '../components.js';
 
 export default function lavori() {
   const body = `
@@ -15,6 +15,7 @@ export default function lavori() {
   <div class="wrap">${workList(progetti, { filterable: true })}</div>
 </section>
 ${socialBlock()}
+${instagramBlock()}
 ${ctaBlock('Il prossimo progetto', 'potrebbe essere il tuo')}
 `;
   return layout({

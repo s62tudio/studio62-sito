@@ -1,5 +1,5 @@
-import { tipi, social } from './config.js';
-import { esc, picture, thumbUrl, arrow } from './lib.js';
+import { site, tipi, social } from './config.js';
+import { esc, picture, thumbUrl, arrow, markSvg } from './lib.js';
 
 // Lista dei lavori: righe tipografiche, anteprima che segue il mouse su desktop
 export function workList(items, { filterable = false } = {}) {
@@ -50,6 +50,39 @@ export function socialBlock() {
         )
         .join('')}
     </ul>
+  </div>
+</section>`;
+}
+
+// Blocco Instagram: profilo di Studio62 con una griglia di lavori, tutto porta al profilo
+const igTiles = [
+  { src: '/img/progetti/falchi-cautano-maglia/01-640.jpg', alt: 'Maglia ASD Falchi Cautano' },
+  { src: '/video/capo-tre-venti-reel.jpg', alt: 'Reel Capo Tre Venti', reel: true },
+  { src: '/img/progetti/tramontana-etichetta/01-640.jpg', alt: 'Etichetta Tramontana' },
+  { src: '/img/progetti/feltagrifer-sito/01-640.jpg', alt: 'Sito Feltagrifer' },
+  { src: '/img/progetti/falchi-cautano-maglia/06-640.jpg', alt: 'Dettaglio della manica con il falco' },
+  { src: '/img/progetti/tramontana-etichetta/02-640.jpg', alt: 'Bottiglia Tramontana' },
+];
+
+export function instagramBlock() {
+  const ig = site.instagram;
+  return `<section class="section ig" aria-labelledby="ig-title">
+  <div class="wrap">
+    <a class="ig-card" href="${ig.url}" rel="noopener" target="_blank" data-cursor="Segui">
+      <div class="ig-side">
+        <p class="label">Instagram</p>
+        <div class="ig-profile">
+          <span class="ig-avatar">${markSvg('ig-mark')}</span>
+          <span class="ig-id"><b>@${esc(ig.handle)}</b><span>Studio62 · Brand · Web · Social</span></span>
+        </div>
+        <h2 class="ig-title" id="ig-title">Segui il lavoro<br>mentre prende forma<span class="dot" aria-hidden="true"></span></h2>
+        <p class="ig-text">Progetti, anteprime e dietro le quinte, pubblicati lì per primi.</p>
+        <span class="btn btn-light ig-btn">Segui su Instagram ${arrow}</span>
+      </div>
+      <ul class="ig-grid" aria-hidden="true">${igTiles
+        .map((t) => `<li class="ig-tile${t.reel ? ' is-reel' : ''}"><img src="${t.src}" alt="" loading="lazy" decoding="async"></li>`)
+        .join('')}</ul>
+    </a>
   </div>
 </section>`;
 }
