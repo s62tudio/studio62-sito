@@ -79,8 +79,8 @@ export const faq = [
     r: 'Dipende dal progetto. Prima di iniziare si definisce cosa verrà consegnato e in quanto tempo, con aggiornamenti a ogni passaggio.',
   },
   {
-    d: 'Si può lavorare anche a distanza?',
-    r: 'Sì. Studio62 lavora da remoto: ci si sente in videochiamata, al telefono o per messaggio, ovunque tu sia.',
+    d: 'I progetti si possono seguire anche a distanza?',
+    r: "Sì, dall'inizio alla consegna: ci si sente in videochiamata, al telefono o per messaggio, ovunque tu sia.",
   },
   {
     d: 'Cosa serve per iniziare?',
