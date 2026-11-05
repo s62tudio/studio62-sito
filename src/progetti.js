@@ -56,22 +56,22 @@ export const progetti = [
     servizio: 'Web design & UI/UX · SEO',
     crediti: [],
     link: { label: 'capotreventi.com', url: 'https://capotreventi.com' },
-    seo: "Il sito della cantina Capo Tre Venti: storia, vini, degustazioni e agriturismo, in un'esperienza elegante su desktop e mobile.",
+    seo: "Il sito di Capo Tre Venti, cantina e agriturismo a Campoli del Monte Taburno: homepage, cantina, gallery e degustazioni, pensati per desktop e telefono.",
     cover: [
-      { file: '01', w: 1891, h: 902, sizes: [640, 1200, 1800], screen: true, fit: 'contain', bg: '#0f0f0f', alt: 'Homepage del sito Capo Tre Venti: "Poesia in ogni singolo sorso" sopra il vigneto, con l\'annuncio dell\'inaugurazione dell\'agriturismo' },
+      { file: '01', w: 1891, h: 902, sizes: [640, 1200, 1800], screen: true, fit: 'contain', bg: '#0f0f0f', alt: 'Homepage: "Poesia in ogni singolo sorso" sul vigneto, con i badge "Dal 2018" e "21 novembre, inaugurazione dell\'agriturismo"' },
     ],
     richiesta: 'Un sito elegante che rappresenti al meglio il lavoro della cantina.',
     idea:
-      "Un'esperienza digitale all'altezza della struttura: estetica raffinata, layout pulito e un percorso che valorizza ogni parte del brand, dalla storia della cantina ai vini, fino alle degustazioni e all'agriturismo.",
+      "Il nome Capo Tre Venti nasce dalle tre correnti d'aria che ventilano i vigneti, e il sito parte da lì: linee dorate che ondeggiano come il vento, tre archi per tre vini (Scirocco, Tramontana e Bora), fondi scuri e titoli eleganti con l'arancio in corsivo. Un'atmosfera calda e raccolta, come entrare in cantina.",
     lavoro:
-      "Navigazione fluida e reattiva su desktop e telefono. Ogni vino ha la sua scheda con ingredienti, valori nutrizionali e indicazioni per lo smaltimento, raggiungibile anche dal QR code stampato sull'etichetta. Indicizzazione su Google tramite Search Console.",
+      "In homepage il vigneto fa da sfondo a \"Poesia in ogni singolo sorso\", con l'annuncio dell'inaugurazione dell'agriturismo in primo piano. Nella pagina della cantina Tramontana è protagonista, mentre Scirocco e Bora aspettano il loro posto come \"Presto disponibile\". La gallery si sfoglia per vigneti, uliveti, territorio e cantina. Su telefono ogni pagina è ripensata: i tre vini diventano un elenco numerato, e chi vuole una degustazione trova contatti e pulsante \"Richiedi disponibilità\" a portata di pollice. Il sito è indicizzato su Google tramite Search Console.",
     risultato:
       "Il sito è online e accompagnerà l'apertura dell'agriturismo, il 21 novembre 2026, insieme alla promozione sui social.",
     galleria: [
-      { file: '02', w: 1885, h: 900, sizes: [640, 1200, 1800], span: 'full', screen: true, fit: 'contain', bg: '#121212', alt: 'Pagina dei vini: Tramontana al centro, Scirocco e Bora in arrivo' },
-      { file: '04', w: 738, h: 1600, sizes: [640, 738], span: 'half', screen: true, full: true, alt: 'Su telefono: il nome Capo Tre Venti e i tre vini Scirocco, Tramontana e Bora' },
-      { file: '05', w: 738, h: 1600, sizes: [640, 738], span: 'half', screen: true, full: true, alt: "Su telefono: Vivi l'Esperienza, info e prenotazioni" },
-      { file: '03', w: 1894, h: 902, sizes: [640, 1200, 1800], span: 'full', screen: true, fit: 'contain', bg: '#0f0f0f', alt: 'Gallery del sito con filtri: vigneti, uliveti, territorio e cantina' },
+      { file: '02', w: 1885, h: 900, sizes: [640, 1200, 1800], span: 'full', screen: true, fit: 'contain', bg: '#121212', alt: 'Pagina La cantina: Tramontana al centro di tre archi, Scirocco e Bora presto disponibili' },
+      { file: '04', w: 738, h: 1600, sizes: [640, 738], span: 'half', screen: true, full: true, alt: 'Su telefono: il nome nato dalle tre correnti d\'aria e l\'elenco dei vini Scirocco, Tramontana e Bora' },
+      { file: '05', w: 738, h: 1600, sizes: [640, 738], span: 'half', screen: true, full: true, alt: "Su telefono: Vivi l'Esperienza, degustazioni guidate con info, contatti e pulsante Richiedi disponibilità" },
+      { file: '03', w: 1894, h: 902, sizes: [640, 1200, 1800], span: 'full', screen: true, fit: 'contain', bg: '#0f0f0f', alt: 'Gallery "Vigneti, uliveti e cantina" con i filtri per vigneti, uliveti, territorio e cantina' },
     ],
   },
   {
