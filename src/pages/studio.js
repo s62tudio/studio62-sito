@@ -63,8 +63,8 @@ export default function studio() {
       <div class="portrait-ph">${markSvg('portrait-mark')}<span class="label">Foto in arrivo</span></div>
     </figure>
     <div class="studio-text">
-      <p class="big-p">Ho iniziato dalla grafica, con il diploma in Grafica e Comunicazione. Da lì sono arrivati i primi progetti per attività vere: una cantina, un rivenditore di macchine agricole, una squadra di calcio, un barbiere, una palestra.</p>
-      <p>Mi piacciono i progetti in cui ogni scelta ha un motivo. Prima di disegnare ascolto, poi propongo una direzione sola, ragionata, e la porto fino in fondo: dal file per la stampa al sito online e configurato. Oggi studio anche Network &amp; Cybersecurity all'ITS, e questo mi permette di curare la parte tecnica dei siti con la stessa attenzione della grafica.</p>
+      <p class="big-p">Studio62 è nato quasi per caso, da un primo lavoro per un'attività vicino casa.</p>
+      <p>Da lì il passaparola ha fatto il resto. Oggi lavoro con realtà molto diverse tra loro, ma con una cosa in comune: hanno una storia che merita di essere raccontata bene. Il mio compito è trovare il modo più chiaro per farlo, sulla carta e sullo schermo.</p>
       <ul class="facts">
         <li><b>Grafica e tecnica insieme</b><span>Un sito non è solo bello: va pubblicato, configurato e tenuto in ordine. Curo anche quella parte.</span></li>
         <li><b>Un solo referente</b><span>Parli sempre con chi fa il lavoro. Niente passaggi di mano, niente messaggi che si perdono.</span></li>
