@@ -60,7 +60,10 @@ export default function studio() {
 <section class="section section-tight">
   <div class="wrap studio-grid">
     <figure class="portrait">
-      <div class="portrait-ph">${markSvg('portrait-mark')}<span class="label">Foto in arrivo</span></div>
+      <picture>
+        <source type="image/webp" srcset="/img/studio/scrivania-640.webp 640w, /img/studio/scrivania-1200.webp 1200w, /img/studio/scrivania-1800.webp 1800w" sizes="(max-width: 900px) 100vw, 40vw">
+        <img class="portrait-img" src="/img/studio/scrivania-1200.jpg" srcset="/img/studio/scrivania-640.jpg 640w, /img/studio/scrivania-1200.jpg 1200w, /img/studio/scrivania-1800.jpg 1800w" sizes="(max-width: 900px) 100vw, 40vw" width="1200" height="1500" alt="La scrivania di Studio62: il portatile con il sito, la bozza del marchio 62., la bottiglia di Tramontana e la maglia dei Falchi" loading="lazy">
+      </picture>
     </figure>
     <div class="studio-text">
       <p class="big-p">Studio62 è nato quasi per caso, da un primo progetto per un'attività vicino casa.</p>

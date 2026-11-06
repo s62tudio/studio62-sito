@@ -423,6 +423,7 @@ body.menu-open .ig-head .ig-avatar::after { box-shadow: 0 0 0 1.5px var(--nero);
 @media (min-width: 900px) { .studio-grid { grid-template-columns: 5fr 7fr; gap: 64px; } }
 .portrait-ph { aspect-ratio: 4 / 5; border-radius: var(--r-img); background: var(--superficie); display: grid; place-items: center; align-content: center; gap: 16px; }
 .portrait-mark { width: 30%; opacity: .9; }
+.portrait-img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--r-img); }
 .studio-text { display: grid; gap: 22px; align-content: start; }
 .big-p { font-family: var(--display); font-weight: 700; font-size: clamp(26px, 2.8vw, 40px); letter-spacing: -.03em; line-height: 1.12; }
 .facts { border-top: 1px solid var(--linea); margin-top: 12px; }
