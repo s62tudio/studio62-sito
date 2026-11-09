@@ -206,8 +206,6 @@
   /* Modulo contatti */
   const form = $('.form');
   if (form) {
-    // Arrivando da "Hai un progetto?" o "Cerchi un profilo junior?" preseleziona l'argomento
-    const tipo = new URLSearchParams(location.search).get('tipo');
     const status = $('.form-status', form);
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -219,20 +217,34 @@
       });
       status.classList.toggle('err', !ok);
       if (!ok) { status.textContent = 'Controlla i campi evidenziati e la casella privacy.'; return; }
-      // Il modulo invia davvero solo quando il sito è su Netlify (data-netlify) e FORM_ATTIVO è true.
-      const FORM_ATTIVO = false;
-      if (!FORM_ATTIVO) {
-        status.textContent = 'Il modulo funziona. In questa anteprima non invia ancora: lo collegheremo con il sito definitivo.';
-        return;
-      }
+      // Invio tramite FormSubmit: i messaggi arrivano a s62tudio@gmail.com
+      const fd = new FormData(form);
+      if (fd.get('sito-web')) { form.reset(); status.textContent = 'Ricevuto. Ti rispondo il prima possibile.'; return; }
+      const dati = {
+        Nome: fd.get('nome'),
+        Email: fd.get('email'),
+        Argomento: fd.getAll('argomento').join(', ') || 'Non indicato',
+        Messaggio: fd.get('messaggio'),
+        _replyto: fd.get('email'),
+        _subject: 'Nuovo messaggio dal sito Studio62',
+        _template: 'table',
+        _captcha: 'false',
+      };
+      const btn = $('button[type="submit"]', form);
+      btn.disabled = true;
+      status.classList.remove('err');
+      status.textContent = 'Invio in corso…';
       try {
-        const res = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(form)).toString() });
-        if (!res.ok) throw new Error(res.status);
+        const res = await fetch(form.action, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(dati) });
+        const out = await res.json().catch(() => ({}));
+        if (!res.ok || String(out.success) !== 'true') throw new Error(out.message || res.status);
         form.reset();
         status.textContent = 'Ricevuto. Ti rispondo il prima possibile.';
       } catch {
         status.classList.add('err');
-        status.textContent = 'Invio non riuscito. Scrivimi direttamente via email.';
+        status.innerHTML = 'Invio non riuscito. Scrivimi direttamente a <a href="mailto:s62tudio@gmail.com">s62tudio@gmail.com</a>.';
+      } finally {
+        btn.disabled = false;
       }
     });
   }

@@ -27,8 +27,7 @@ export default function contatti() {
         </div>
       </div>
     </div>
-    <form class="form" name="contatti" method="POST" data-netlify="true" netlify-honeypot="sito-web" novalidate>
-      <input type="hidden" name="form-name" value="contatti">
+    <form class="form" name="contatti" method="POST" action="https://formsubmit.co/ajax/${site.email}" novalidate>
       <p class="hp"><label>Non compilare <input name="sito-web" tabindex="-1" autocomplete="off"></label></p>
       <div class="field"><label for="f-nome">Nome</label><input id="f-nome" name="nome" autocomplete="name" required></div>
       <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>

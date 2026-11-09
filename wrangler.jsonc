@@ -1,0 +1,9 @@
+// Configurazione per Cloudflare: pubblica la cartella dist/ creata da "npm run build"
+{
+  "name": "studio62-sito",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}
