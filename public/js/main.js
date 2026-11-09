@@ -237,7 +237,14 @@
       try {
         const res = await fetch(form.action, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(dati) });
         const out = await res.json().catch(() => ({}));
-        if (!res.ok || String(out.success) !== 'true') throw new Error(out.message || res.status);
+        if (!res.ok || String(out.success) !== 'true') {
+          console.warn('FormSubmit:', res.status, out.message || out);
+          if (/activat/i.test(out.message || '')) {
+            status.textContent = 'Il modulo deve ancora essere attivato: controlla la casella s62tudio@gmail.com (anche lo spam) e clicca "Activate Form" nella mail di FormSubmit.';
+            return;
+          }
+          throw new Error(out.message || res.status);
+        }
         form.reset();
         status.textContent = 'Ricevuto. Ti rispondo il prima possibile.';
       } catch {
