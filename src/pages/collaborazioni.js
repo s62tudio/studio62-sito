@@ -14,7 +14,7 @@ export default function collaborazioniPage() {
 <section class="page-hero">
   <div class="wrap">
     <p class="label">Collaborazioni</p>
-    <h1 class="page-title">Progetti<br>su misura<span class="dot" aria-hidden="true"></span></h1>
+    <h1 class="page-title">Fatto<br>su misura<span class="dot" aria-hidden="true"></span></h1>
     <p class="lead">Studio62 collabora con attività e piccole realtà su progetti singoli, con un obiettivo, dei tempi e una consegna chiari. Un sito, un'etichetta, una divisa, una campagna per un'apertura.</p>
   </div>
 </section>
