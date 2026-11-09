@@ -2,7 +2,7 @@
 
 export const site = {
   name: 'Studio62',
-  url: 'https://studio62.com', // dominio definitivo: serve per SEO e anteprime social
+  url: 'https://studio62.dev', // dominio definitivo: serve per SEO e anteprime social
   owner: 'Francesco Battaglia',
   email: 's62tudio@gmail.com',
   instagram: { handle: '_studio_62_', url: 'https://www.instagram.com/_studio_62_/' },
