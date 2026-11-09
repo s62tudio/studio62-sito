@@ -102,7 +102,7 @@ export default function progetto(slug) {
 <article class="case">
   <header class="case-hero">
     <div class="wrap">
-      <a class="back" href="/lavori/">← Lavori</a>
+      <a class="back" href="/progetti/">← Progetti</a>
       <p class="label">${esc(p.cliente)} · ${p.tipo.map((t) => tipi[t]).join(' · ')}</p>
       <h1 class="case-title">${titled(p.titolo)}</h1>
       <dl class="case-meta">${meta.map(([k, v]) => `<div><dt class="label">${k}</dt><dd>${v}</dd></div>`).join('')}</dl>
@@ -120,12 +120,12 @@ export default function progetto(slug) {
     <div class="chapters">${chapter('Il risultato', p.risultato)}</div>
     ${
       sibling
-        ? `<p class="sibling"><span class="label">Per lo stesso cliente</span> <a class="link" href="/lavori/${sibling.slug}/">${esc(sibling.breve)}: ${esc(sibling.titolo)} ${arrow}</a></p>`
+        ? `<p class="sibling"><span class="label">Per lo stesso cliente</span> <a class="link" href="/progetti/${sibling.slug}/">${esc(sibling.breve)}: ${esc(sibling.titolo)} ${arrow}</a></p>`
         : ''
     }
   </div>
 </article>
-<a class="next" href="/lavori/${next.slug}/" data-cursor="Apri">
+<a class="next" href="/progetti/${next.slug}/" data-cursor="Apri">
   <span class="wrap next-inner">
     <span class="label">Prossimo progetto</span>
     <span class="next-client">${esc(next.cliente)}</span>
@@ -135,7 +135,7 @@ export default function progetto(slug) {
 `;
 
   return layout({
-    path: `/lavori/${p.slug}/`,
+    path: `/progetti/${p.slug}/`,
     title: `${p.cliente} · ${p.breve}`,
     description: p.seo,
     body,
@@ -149,7 +149,7 @@ export default function progetto(slug) {
       dateCreated: String(p.anno),
       creator: { '@type': 'Organization', name: 'Studio62', url: site.url },
       image: site.url + ogImg,
-      url: `${site.url}/lavori/${p.slug}/`,
+      url: `${site.url}/progetti/${p.slug}/`,
     },
   });
 }

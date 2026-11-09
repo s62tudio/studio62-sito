@@ -4,9 +4,9 @@ import { layout, ctaBlock } from '../layout.js';
 import { esc, arrow } from '../lib.js';
 
 function esempio(c) {
-  if (c.esempio === 'social') return `<a class="link" href="/lavori/#social">Progetti di comunicazione ${arrow}</a>`;
+  if (c.esempio === 'social') return `<a class="link" href="/progetti/#social">Progetti di comunicazione ${arrow}</a>`;
   const ex = c.esempio ? progetti.find((p) => p.slug === c.esempio) : null;
-  return ex ? `<a class="link" href="/lavori/${ex.slug}/">Esempio: ${esc(ex.cliente)} · ${esc(ex.breve)} ${arrow}</a>` : '';
+  return ex ? `<a class="link" href="/progetti/${ex.slug}/">Esempio: ${esc(ex.cliente)} · ${esc(ex.breve)} ${arrow}</a>` : '';
 }
 
 export default function collaborazioniPage() {

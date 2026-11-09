@@ -47,7 +47,7 @@ function footer() {
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-lead">
-        <p class="footer-claim">Studio creativo. Siti, grafica e comunicazione per attività che vogliono farsi notare.</p>
+        <p class="footer-claim">Creative Showcase. Siti, grafica e comunicazione per attività che vogliono farsi notare.</p>
         <a class="footer-mail" href="mailto:${site.email}">${site.email}</a>
       </div>
       <nav class="footer-col" aria-label="Pagine"><span class="label">Pagine</span>${nav.map((n) => `<a href="${n.href}">${n.label}</a>`).join('')}</nav>

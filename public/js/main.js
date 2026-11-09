@@ -49,7 +49,7 @@
     document.addEventListener('pointerleave', () => document.documentElement.classList.remove('has-cursor'));
   }
 
-  /* Lista lavori: anteprima che segue il mouse */
+  /* Lista progetti: anteprima che segue il mouse */
   $$('.work').forEach((work) => {
     const prev = $('.work-preview', work);
     if (!prev || !finePointer) return;
@@ -73,7 +73,7 @@
     });
   });
 
-  /* Filtri della pagina Lavori */
+  /* Filtri della pagina Progetti */
   const chips = $$('.chip[data-filter]');
   chips.forEach((chip) =>
     chip.addEventListener('click', () => {
@@ -208,7 +208,6 @@
   if (form) {
     // Arrivando da "Hai un progetto?" o "Cerchi un profilo junior?" preseleziona l'argomento
     const tipo = new URLSearchParams(location.search).get('tipo');
-    if (tipo === 'lavoro') $$('input[data-tipo="lavoro"]', form).forEach((i) => { i.checked = true; });
     const status = $('.form-status', form);
     form.addEventListener('submit', async (e) => {
       e.preventDefault();

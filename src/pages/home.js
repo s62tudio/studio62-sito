@@ -39,12 +39,12 @@ export default function home() {
       <span class="line" aria-hidden="true"><span>al punto<span class="dot hero-dot"></span></span></span>
     </h1>
     <div class="hero-visual" aria-hidden="true">
-      <div class="hero-phone frame-phone is-dark"><div class="fp-bezel"><div class="fp-screen"><div class="fp-status"><span>9:41</span><span class="fp-island"></span><span class="fp-icons"><i></i><i></i></span></div><div class="fp-view hs-wrap">${heroSlides.map((sl, i) => `<a class="hs${i === 0 ? ' on' : ''}${sl.clip ? ' is-clip' : ''}" href="/lavori/${sl.slug}/" tabindex="-1">${slideMedia(sl)}<span class="hs-cap"><b>${esc(sl.cliente)}</b>${esc(sl.cosa)}</span></a>`).join('')}<span class="hs-bars">${heroSlides.map((_, i) => `<i${i === 0 ? ' class="on"' : ''}></i>`).join('')}</span></div></div></div></div>
+      <div class="hero-phone frame-phone is-dark"><div class="fp-bezel"><div class="fp-screen"><div class="fp-status"><span>9:41</span><span class="fp-island"></span><span class="fp-icons"><i></i><i></i></span></div><div class="fp-view hs-wrap">${heroSlides.map((sl, i) => `<a class="hs${i === 0 ? ' on' : ''}${sl.clip ? ' is-clip' : ''}" href="/progetti/${sl.slug}/" tabindex="-1">${slideMedia(sl)}<span class="hs-cap"><b>${esc(sl.cliente)}</b>${esc(sl.cosa)}</span></a>`).join('')}<span class="hs-bars">${heroSlides.map((_, i) => `<i${i === 0 ? ' class="on"' : ''}></i>`).join('')}</span></div></div></div></div>
     </div>
     <div class="hero-foot">
-      <p class="hero-lead">Studio62 è uno studio creativo. Siti web, grafica e progetti di comunicazione per attività che vogliono farsi notare.</p>
+      <p class="hero-lead">Studio62 è un Creative Showcase. Siti web, grafica e progetti di comunicazione per attività che vogliono farsi notare.</p>
       <div class="hero-actions">
-        <a class="btn" href="/lavori/">Guarda i lavori ${arrow}</a>
+        <a class="btn" href="/progetti/">Guarda i progetti ${arrow}</a>
         <a class="link" href="/contatti/">Inizia un progetto</a>
       </div>
     </div>
@@ -54,11 +54,11 @@ export default function home() {
 <section class="section">
   <div class="wrap">
     <div class="sec-head">
-      <p class="label">Lavori selezionati</p>
+      <p class="label">Progetti selezionati</p>
       <div><h2 class="h2">Progetti veri, per attività vere<span class="dot" aria-hidden="true"></span></h2></div>
     </div>
     ${workList(progetti)}
-    <p class="more"><a class="link" href="/lavori/">Tutti i lavori ${arrow}</a></p>
+    <p class="more"><a class="link" href="/progetti/">Tutti i progetti ${arrow}</a></p>
   </div>
 </section>
 
@@ -114,22 +114,18 @@ ${ctaBlock()}
 
   return layout({
     path: '/',
-    title: 'Studio62 · Studio creativo',
+    title: 'Studio62 · Creative Showcase',
     description: site.description,
     body,
     bodyClass: 'is-home',
     jsonld: {
       '@context': 'https://schema.org',
-      '@type': 'ProfessionalService',
+      '@type': 'WebSite',
       name: 'Studio62',
+      alternateName: 'Studio62 · Creative Showcase',
       url: site.url,
-      logo: site.url + '/img/logo/studio62-marchio-scuro.svg',
       description: site.description,
-      founder: { '@type': 'Person', name: site.owner },
-      email: site.email,
-      sameAs: [site.instagram.url],
-      areaServed: 'IT',
-      knowsAbout: collaborazioni.map((s) => s.nome),
+      author: { '@type': 'Person', name: site.owner, email: site.email, sameAs: [site.instagram.url] },
     },
   });
 }

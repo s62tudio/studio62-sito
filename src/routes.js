@@ -2,7 +2,7 @@
 import { site } from './config.js';
 import { progetti } from './progetti.js';
 import home from './pages/home.js';
-import lavori from './pages/lavori.js';
+import elenco from './pages/elenco.js';
 import progetto from './pages/progetto.js';
 import collaborazioni from './pages/collaborazioni.js';
 import studio from './pages/studio.js';
@@ -12,13 +12,13 @@ import { privacy, notFound } from './pages/altre.js';
 export function routes() {
   const r = {
     '/': home,
-    '/lavori/': lavori,
+    '/progetti/': elenco,
     '/collaborazioni/': collaborazioni,
     '/studio/': studio,
     '/contatti/': contatti,
     '/privacy/': privacy,
   };
-  for (const p of progetti) r[`/lavori/${p.slug}/`] = () => progetto(p.slug);
+  for (const p of progetti) r[`/progetti/${p.slug}/`] = () => progetto(p.slug);
   return r;
 }
 

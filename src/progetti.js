@@ -1,4 +1,4 @@
-// I case study. L'ordine di questa lista è l'ordine in homepage e nella pagina Lavori.
+// I case study. L'ordine di questa lista è l'ordine in homepage e nella pagina Progetti.
 //
 // Per aggiungere un progetto:
 // 1. metti le immagini in public/img/progetti/<slug>/ con i nomi 01-640.jpg, 01-1200.jpg ... (vedi README)
@@ -60,7 +60,7 @@ export const progetti = [
     cover: [
       { file: '01', w: 1891, h: 902, sizes: [640, 1200, 1800], screen: true, fit: 'contain', bg: '#0f0f0f', alt: 'Homepage: "Poesia in ogni singolo sorso" sul vigneto, con i badge "Dal 2018" e "21 novembre, inaugurazione dell\'agriturismo"' },
     ],
-    richiesta: 'Un sito elegante che rappresenti al meglio il lavoro della cantina.',
+    richiesta: 'Un sito elegante che rappresenti al meglio la cantina e i suoi vini.',
     idea:
       "Il nome Capo Tre Venti nasce dalle tre correnti d'aria che ventilano i vigneti, e il sito parte da lì: linee dorate che ondeggiano come il vento, tre archi per tre vini (Scirocco, Tramontana e Bora), fondi scuri e titoli eleganti con l'arancio in corsivo. Un'atmosfera calda e raccolta, come entrare in cantina.",
     lavoro:

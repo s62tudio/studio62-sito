@@ -2,3 +2,5 @@
 /servizi   /collaborazioni/  301
 /percorso/  /studio/  301
 /percorso   /studio/  301
+/lavori/*  /progetti/:splat  301
+/lavori    /progetti/  301
